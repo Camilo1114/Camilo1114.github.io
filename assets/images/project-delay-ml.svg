@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#091728"/><stop offset="1" stop-color="#132844"/></linearGradient>
+  <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6ca7ff"/><stop offset="1" stop-color="#72e6c7"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8eb8ef" stroke-opacity=".08"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+
+<g transform="translate(180 350)">
+ <path d="M0 380H1220" stroke="#8eb8ef" stroke-opacity=".4" stroke-width="3"/>
+ <g fill="#6ca7ff"><rect x="0" y="330" width="72" height="50" rx="10" opacity="0.45"/><rect x="120" y="257" width="72" height="123" rx="10" opacity="0.63"/><rect x="240" y="184" width="72" height="196" rx="10" opacity="0.81"/><rect x="360" y="111" width="72" height="269" rx="10" opacity="0.45"/><rect x="480" y="298" width="72" height="82" rx="10" opacity="0.63"/><rect x="600" y="225" width="72" height="155" rx="10" opacity="0.81"/><rect x="720" y="152" width="72" height="228" rx="10" opacity="0.45"/><rect x="840" y="79" width="72" height="301" rx="10" opacity="0.63"/><rect x="960" y="266" width="72" height="114" rx="10" opacity="0.81"/><rect x="1080" y="193" width="72" height="187" rx="10" opacity="0.45"/></g>
+ <path d="M20 280 C180 250 240 320 360 220 S570 270 700 140 S930 260 1190 60" fill="none" stroke="#72e6c7" stroke-width="11" filter="url(#glow)"/>
+ <circle cx="1370" cy="410" r="95" fill="#0c1d31" stroke="#ffca7a" stroke-width="8"/><text x="1370" y="398" fill="#ffca7a" font-family="Arial" font-size="25" text-anchor="middle">DELAY</text><text x="1370" y="440" fill="#f4f7fb" font-family="Arial" font-size="34" font-weight="700" text-anchor="middle">RISK</text>
+</g>
+<text x="110" y="140" fill="#72e6c7" font-family="Arial" font-size="28" font-weight="700" letter-spacing="6">MACHINE LEARNING · LOGISTICS</text>
+<text x="110" y="220" fill="#f4f7fb" font-family="Arial" font-size="62" font-weight="700">Predicting Shipment</text><text x="110" y="292" fill="#f4f7fb" font-family="Arial" font-size="62" font-weight="700">Delays</text>
+</svg>

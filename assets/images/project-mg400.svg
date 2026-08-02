@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#091728"/><stop offset="1" stop-color="#132844"/></linearGradient>
+  <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6ca7ff"/><stop offset="1" stop-color="#72e6c7"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8eb8ef" stroke-opacity=".08"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+
+<g opacity=".9">
+ <rect x="935" y="525" width="430" height="170" rx="30" fill="#0a1423" stroke="#8eb8ef" stroke-opacity=".35" stroke-width="3"/>
+ <g fill="#72e6c7" fill-opacity=".5"><circle cx="985" cy="568" r="8"/><circle cx="1031" cy="568" r="8"/><circle cx="1077" cy="568" r="8"/><circle cx="1123" cy="568" r="8"/><circle cx="1169" cy="568" r="8"/><circle cx="1215" cy="568" r="8"/><circle cx="1261" cy="568" r="8"/><circle cx="1307" cy="568" r="8"/><circle cx="985" cy="611" r="8"/><circle cx="1031" cy="611" r="8"/><circle cx="1077" cy="611" r="8"/><circle cx="1123" cy="611" r="8"/><circle cx="1169" cy="611" r="8"/><circle cx="1215" cy="611" r="8"/><circle cx="1261" cy="611" r="8"/><circle cx="1307" cy="611" r="8"/><circle cx="985" cy="654" r="8"/><circle cx="1031" cy="654" r="8"/><circle cx="1077" cy="654" r="8"/><circle cx="1123" cy="654" r="8"/><circle cx="1169" cy="654" r="8"/><circle cx="1215" cy="654" r="8"/><circle cx="1261" cy="654" r="8"/><circle cx="1307" cy="654" r="8"/></g>
+</g>
+<g fill="none" stroke="url(#a)" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+ <path d="M370 665h260"/><path d="M500 665V520"/><path d="M500 520l165-170"/><path d="M665 350l215 95"/><path d="M880 445l138-115"/>
+</g>
+<g fill="#eaf3ff"><circle cx="500" cy="520" r="42"/><circle cx="665" cy="350" r="38"/><circle cx="880" cy="445" r="34"/><circle cx="1018" cy="330" r="28"/></g>
+<path d="M1018 358v170" stroke="#72e6c7" stroke-width="16" stroke-linecap="round"/>
+<circle cx="1018" cy="545" r="13" fill="#72e6c7" filter="url(#glow)"/>
+<text x="110" y="140" fill="#72e6c7" font-family="Arial" font-size="28" font-weight="700" letter-spacing="6">ROBOTICS · AUTOMATION</text>
+<text x="110" y="220" fill="#f4f7fb" font-family="Arial" font-size="62" font-weight="700">Parameterized Robotic</text>
+<text x="110" y="292" fill="#f4f7fb" font-family="Arial" font-size="62" font-weight="700">Sample Dispensing</text>
+</svg>

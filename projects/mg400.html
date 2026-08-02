@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A configurable software framework for automating laboratory sample-dispensing workflows with a DOBOT MG400 robot." />
+  <meta name="theme-color" content="#08111f" />
+  <title>Parameterized Robotic Sample Dispensing | Camilo Ramirez</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body class="project-page">
+  <a class="skip-link" href="#case-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html" aria-label="Camilo Ramirez home"><span class="brand-mark">CR</span><span class="brand-text">Camilo Ramirez</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#expertise">Expertise</a><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a>
+        <a class="nav-cta" href="../cv/">View CV</a>
+      </nav>
+    </div>
+  </header>
+  <main id="case-content">
+    <section class="case-hero">
+      <div class="container">
+        <a class="case-back" href="../index.html#projects">← Back to projects</a>
+        <p class="eyebrow">Independent MSc project</p>
+        <h1 class="case-title">Parameterized Robotic Sample Dispensing</h1>
+        <p class="case-lead">A configurable software framework for automating laboratory sample-dispensing workflows with a DOBOT MG400 robot.</p>
+        <div class="case-meta"><span>Robotics</span><span>Automation</span><span>Python</span><span>System integration</span></div>
+        <div class="case-visual"><img src="../assets/images/project-mg400.svg" alt="Visual cover for Parameterized Robotic Sample Dispensing" /></div>
+      </div>
+    </section>
+    <section class="section-shell">
+      <div class="container case-layout">
+        <article class="case-content">
+          <h2>The problem</h2>
+          <p>Laboratory robot applications are often built around fixed station layouts and hard-coded sequences. Changing a sample holder, liquid configuration, dispensing order, or workcell layout can therefore require substantial changes to the robot program.</p>
+
+          <h2>The approach</h2>
+          <p>I developed a parameterized framework that separates process configuration, station geometry, workflow generation, validation, and robot execution.</p>
+          <div class="architecture-flow" aria-label="System architecture">
+            <div class="flow-step">Process configuration</div><div class="flow-step">Workflow generation</div><div class="flow-step">Pose validation</div><div class="flow-step">Motion execution</div><div class="flow-step">DOBOT MG400</div>
+          </div>
+
+          <h2>My contribution</h2>
+          <ul>
+            <li>Designed the parameterized software architecture and workflow-generation logic.</li>
+            <li>Implemented configurable tip, liquid, wafer, and waste stations.</li>
+            <li>Developed operator and developer interfaces for execution and configuration.</li>
+            <li>Integrated the framework with the Common Robot Interface and the MG400 controller.</li>
+            <li>Implemented geometry, workspace, and pose validation.</li>
+            <li>Evaluated reconfiguration, robot motion, and dry-run workflow execution.</li>
+          </ul>
+
+          <h2>Validation scope</h2>
+          <p>The system was evaluated through dry-run robot execution, multiple station and wafer configurations, motion analysis, and repeatability tests. Active liquid-volume and droplet-placement validation were outside the experimental scope.</p>
+
+          <h2>What this project demonstrates</h2>
+          <p>Robot programming, configurable automation, software architecture, physical-system integration, operator-interface design, validation, and experimental engineering.</p>
+        </article>
+        <aside class="case-sidebar" aria-label="Project information">
+          <h2>Project facts</h2>
+          <dl class="case-facts">
+            <div><dt>Project type</dt><dd>Independent MSc project</dd></div>
+            <div><dt>Year</dt><dd>2026</dd></div>
+            <div><dt>Disciplines</dt><dd>Robotics, Automation, Python</dd></div>
+          </dl>
+          <a class="button button-primary" href="https://github.com/Camilo1114/Pipetting-MG400" target="_blank" rel="noopener">Open repository</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-row"><p>© <span id="current-year"></span> Edwin Camilo Ramirez Sanabria</p><p><a href="../index.html#projects">Back to all projects</a></p></div></footer>
+  <script defer src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#091728"/><stop offset="1" stop-color="#132844"/></linearGradient>
+  <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6ca7ff"/><stop offset="1" stop-color="#72e6c7"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8eb8ef" stroke-opacity=".08"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+
+<g transform="translate(120 310)">
+ <path d="M0 410H1360M0 0V410" stroke="#8eb8ef" stroke-opacity=".32" stroke-width="3"/>
+ <path d="M0 270H1360" stroke="#d9a7ff" stroke-width="7" stroke-dasharray="20 18" opacity=".85"/>
+ <path d="M0 390 C80 390 110 385 150 355 S230 220 310 265 S430 310 510 280 S640 250 720 270 S850 285 930 270 S1080 264 1360 270" fill="none" stroke="#72e6c7" stroke-width="11" filter="url(#glow)"/>
+ <rect x="230" y="55" width="600" height="300" fill="#6ca7ff" fill-opacity=".06" stroke="#6ca7ff" stroke-opacity=".4" stroke-dasharray="12 12"/>
+ <text x="530" y="95" fill="#6ca7ff" font-family="Arial" font-size="24" text-anchor="middle">Prediction horizon</text>
+</g>
+<text x="110" y="140" fill="#72e6c7" font-family="Arial" font-size="28" font-weight="700" letter-spacing="6">CONTROL · OPTIMIZATION · SIMULATION</text>
+<text x="110" y="220" fill="#f4f7fb" font-family="Arial" font-size="62" font-weight="700">Model Predictive</text><text x="110" y="292" fill="#f4f7fb" font-family="Arial" font-size="62" font-weight="700">Control</text>
+</svg>

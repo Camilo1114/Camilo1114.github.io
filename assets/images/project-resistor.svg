@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#091728"/><stop offset="1" stop-color="#132844"/></linearGradient>
+  <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6ca7ff"/><stop offset="1" stop-color="#72e6c7"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8eb8ef" stroke-opacity=".08"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+
+<g transform="translate(190 395)">
+ <path d="M0 110H220M980 110h220" stroke="#8eb8ef" stroke-width="22" stroke-linecap="round"/>
+ <rect x="220" y="25" width="760" height="170" rx="85" fill="#d8b77c" stroke="#f6d8a3" stroke-width="6"/>
+ <rect x="360" y="25" width="38" height="170" fill="#6b2fcb"/><rect x="470" y="25" width="38" height="170" fill="#1d1d24"/><rect x="580" y="25" width="38" height="170" fill="#e13d42"/><rect x="765" y="25" width="38" height="170" fill="#e8bd4a"/>
+</g>
+<g transform="translate(1040 160)"><rect width="330" height="190" rx="24" fill="#0a1423" stroke="#72e6c7" stroke-opacity=".5" stroke-width="4"/><g fill="#72e6c7"><rect x="30" y="25" width="19" height="24" rx="4" opacity="0.35"/><rect x="68" y="25" width="19" height="24" rx="4" opacity="0.47"/><rect x="106" y="25" width="19" height="24" rx="4" opacity="0.59"/><rect x="144" y="25" width="19" height="24" rx="4" opacity="0.71"/><rect x="182" y="25" width="19" height="24" rx="4" opacity="0.35"/><rect x="220" y="25" width="19" height="24" rx="4" opacity="0.47"/><rect x="258" y="25" width="19" height="24" rx="4" opacity="0.59"/><rect x="296" y="25" width="19" height="24" rx="4" opacity="0.71"/><rect x="30" y="73" width="19" height="24" rx="4" opacity="0.47"/><rect x="68" y="73" width="19" height="24" rx="4" opacity="0.59"/><rect x="106" y="73" width="19" height="24" rx="4" opacity="0.71"/><rect x="144" y="73" width="19" height="24" rx="4" opacity="0.35"/><rect x="182" y="73" width="19" height="24" rx="4" opacity="0.47"/><rect x="220" y="73" width="19" height="24" rx="4" opacity="0.59"/><rect x="258" y="73" width="19" height="24" rx="4" opacity="0.71"/><rect x="296" y="73" width="19" height="24" rx="4" opacity="0.35"/><rect x="30" y="121" width="19" height="24" rx="4" opacity="0.59"/><rect x="68" y="121" width="19" height="24" rx="4" opacity="0.71"/><rect x="106" y="121" width="19" height="24" rx="4" opacity="0.35"/><rect x="144" y="121" width="19" height="24" rx="4" opacity="0.47"/><rect x="182" y="121" width="19" height="24" rx="4" opacity="0.59"/><rect x="220" y="121" width="19" height="24" rx="4" opacity="0.71"/><rect x="258" y="121" width="19" height="24" rx="4" opacity="0.35"/><rect x="296" y="121" width="19" height="24" rx="4" opacity="0.47"/></g><text x="165" y="164" fill="#dcecff" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700">EMBEDDED ML</text></g>
+<path d="M900 405C1040 380 1100 340 1200 340" fill="none" stroke="#72e6c7" stroke-width="6" stroke-dasharray="14 14"/>
+<text x="110" y="140" fill="#72e6c7" font-family="Arial" font-size="28" font-weight="700" letter-spacing="6">EMBEDDED AI · COMPUTER VISION</text>
+<text x="110" y="220" fill="#f4f7fb" font-family="Arial" font-size="62" font-weight="700">Resistor Classification</text>
+<text x="110" y="292" fill="#f4f7fb" font-family="Arial" font-size="62" font-weight="700">on Constrained Hardware</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#091728"/><stop offset="1" stop-color="#132844"/></linearGradient>
+  <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6ca7ff"/><stop offset="1" stop-color="#72e6c7"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#8eb8ef" stroke-opacity=".08"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+
+<g transform="translate(820 500)" fill="none" stroke="url(#a)" filter="url(#glow)">
+ <path d="M-430-30L-180-250 270-180 430 80 180 280-260 230Z" stroke-width="11" fill="#0c1d31"/>
+ <path d="M-430-30L-210 80 180 280M-210 80L-180-250M-210 80L270-180M270-180L430 80" stroke-width="7" opacity=".7"/>
+ <circle cx="-210" cy="80" r="90" stroke-width="8"/><circle cx="-210" cy="80" r="34" stroke-width="8"/>
+ <rect x="90" y="-80" width="160" height="130" rx="18" stroke-width="8"/>
+</g>
+<g fill="#72e6c7" opacity=".85"><circle cx="400" cy="640" r="12"/><circle cx="540" cy="300" r="12"/><circle cx="1090" cy="320" r="12"/><circle cx="1250" cy="580" r="12"/></g>
+<text x="110" y="140" fill="#72e6c7" font-family="Arial" font-size="28" font-weight="700" letter-spacing="6">MECHANICAL DESIGN · PROTOTYPING</text>
+<text x="110" y="220" fill="#f4f7fb" font-family="Arial" font-size="62" font-weight="700">CAD, Mechanical</text><text x="110" y="292" fill="#f4f7fb" font-family="Arial" font-size="62" font-weight="700">Design &amp; FEA</text>
+</svg>
