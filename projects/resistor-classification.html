@@ -2,72 +2,475 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A collaborative embedded machine-learning system for classifying electrical resistors from visual data on resource-constrained hardware." />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="A real-time embedded machine learning system for detecting resistors using a Raspberry Pi, camera, MobileNetV2, and TensorFlow Lite."
+  />
+
   <meta name="theme-color" content="#08111f" />
-  <title>Embedded ML for Resistor Classification | Camilo Ramirez</title>
-  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <title>Real-Time Resistor Detection | Camilo Ramirez</title>
+
+  <link
+    rel="icon"
+    href="../assets/images/favicon.svg"
+    type="image/svg+xml"
+  />
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/styles.css"
+  />
 </head>
+
 <body class="project-page">
-  <a class="skip-link" href="#case-content">Skip to content</a>
+
+  <a class="skip-link" href="#case-content">
+    Skip to content
+  </a>
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="../index.html" aria-label="Camilo Ramirez home"><span class="brand-mark">CR</span><span class="brand-text">Camilo Ramirez</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span><span></span></button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="../index.html#expertise">Expertise</a><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a>
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="Camilo Ramirez home"
+      >
+        <span class="brand-mark">CR</span>
+        <span class="brand-text">Camilo Ramirez</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        id="site-nav"
+        class="site-nav"
+        aria-label="Primary navigation"
+      >
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
         <a class="nav-cta" href="../cv/">View CV</a>
       </nav>
+
     </div>
   </header>
+
+
   <main id="case-content">
+
     <section class="case-hero">
       <div class="container">
-        <a class="case-back" href="../index.html#projects">← Back to projects</a>
-        <p class="eyebrow">Collaborative university project</p>
-        <h1 class="case-title">Embedded ML for Resistor Classification</h1>
-        <p class="case-lead">A collaborative embedded machine-learning system for classifying electrical resistors from visual data on resource-constrained hardware.</p>
-        <div class="case-meta"><span>Embedded AI</span><span>Computer vision</span><span>Machine learning</span><span>Team project</span></div>
-        <div class="case-visual"><img src="../assets/images/project-resistor.svg" alt="Visual cover for Embedded ML for Resistor Classification" /></div>
+
+        <a
+          class="case-back"
+          href="../index.html#projects"
+        >
+          ← Back to projects
+        </a>
+
+        <p class="eyebrow">
+          Collaborative university project
+        </p>
+
+        <h1 class="case-title">
+          Real-Time Resistor Detection
+        </h1>
+
+        <p class="case-lead">
+          A computer-vision system that detects resistors in real time using
+          embedded machine learning on a Raspberry Pi.
+        </p>
+
+        <div class="case-meta">
+          <span>Embedded AI</span>
+          <span>Computer vision</span>
+          <span>Raspberry Pi</span>
+          <span>TensorFlow Lite</span>
+        </div>
+
+        <div class="case-visual">
+          <img
+            src="../assets/images/project-resistor.svg"
+            alt="Real-time resistor detection using embedded machine learning"
+          />
+        </div>
+
       </div>
     </section>
+
+
     <section class="section-shell">
       <div class="container case-layout">
+
         <article class="case-content">
+
           <h2>The problem</h2>
-          <p>Resistor values are encoded through coloured bands. Automatically reading them requires visual classification while working within the memory, compute, and latency limits of embedded hardware.</p>
+
+          <p>
+            Electronics laboratories often contain mixed and unsorted
+            components from prototyping, repairs, and disassembly. Manually
+            identifying small parts can be slow and error-prone.
+          </p>
+
+          <p>
+            The objective was to build a low-cost embedded system that could
+            determine in real time whether an object shown to the camera was a
+            resistor or a non-resistor.
+          </p>
+
 
           <h2>The system</h2>
-          <div class="architecture-flow" aria-label="Embedded classification workflow">
-            <div class="flow-step">Camera input</div><div class="flow-step">Image preparation</div><div class="flow-step">Embedded model</div><div class="flow-step">Band classification</div><div class="flow-step">Resistance value</div>
+
+          <div
+            class="architecture-flow"
+            aria-label="Embedded resistor detection workflow"
+          >
+            <div class="flow-step">Camera frame</div>
+            <div class="flow-step">Image preprocessing</div>
+            <div class="flow-step">MobileNetV2</div>
+            <div class="flow-step">TensorFlow Lite</div>
+            <div class="flow-step">Live prediction</div>
           </div>
 
-          <h2>Team project</h2>
-          <p>This was a collaborative project. The public case study should distinguish the complete team outcome from the parts you personally designed, implemented, and validated.</p>
+          <ul>
+            <li>
+              Raspberry Pi 4
+            </li>
 
-          <!-- TODO: Replace the text below with Camilo's exact personal contribution before publishing. -->
-          <h2>My contribution</h2>
-          <p>Add your exact responsibilities here before publishing—for example, dataset preparation, model development, embedded deployment, hardware integration, evaluation, or documentation.</p>
+            <li>
+              Raspberry Pi Camera Module 3 with autofocus
+            </li>
+
+            <li>
+              MobileNetV2 transfer-learning model
+            </li>
+
+            <li>
+              TensorFlow and TensorFlow Lite
+            </li>
+
+            <li>
+              FP32 and quantized INT8 model versions
+            </li>
+
+            <li>
+              Real-time camera inference with confidence and latency display
+            </li>
+          </ul>
+
+
+          <h2>Dataset collection</h2>
+
+          <p>
+            Images were collected directly using the Raspberry Pi camera. A
+            small Flask interface displayed the live camera feed and allowed
+            each captured image to be labeled as either resistor or
+            non-resistor.
+          </p>
+
+          <p>
+            The dataset included different resistor orientations, lighting
+            conditions, backgrounds, electronic components, wires, and objects
+            with similar visual characteristics.
+          </p>
+
+
+          <h2>Data preparation</h2>
+
+          <ul>
+            <li>
+              Removed blurred, incorrectly labeled, and poorly framed images
+            </li>
+
+            <li>
+              Cropped and resized all images to 224 × 224 pixels
+            </li>
+
+            <li>
+              Applied rotations, translations, zoom, and horizontal flipping
+            </li>
+
+            <li>
+              Used dynamic data augmentation during model training
+            </li>
+          </ul>
+
+
+          <h2>Model development</h2>
+
+          <p>
+            MobileNetV2 was selected because it provides a practical balance
+            between accuracy, model size, and inference cost for embedded
+            devices.
+          </p>
+
+          <p>
+            The pretrained ImageNet classification head was replaced with a
+            lightweight binary classifier consisting of global average
+            pooling, dropout, and a sigmoid output.
+          </p>
+
+          <p>
+            Training was completed in two phases:
+          </p>
+
+          <ol>
+            <li>
+              The MobileNetV2 backbone was frozen while the new classification
+              head was trained.
+            </li>
+
+            <li>
+              Approximately 30% of the upper layers were unfrozen and
+              fine-tuned using a lower learning rate.
+            </li>
+          </ol>
+
+
+          <h2>Quantization</h2>
+
+          <p>
+            The trained model was converted to TensorFlow Lite and evaluated
+            in two formats:
+          </p>
+
+          <ul>
+            <li>
+              Standard FP32 model
+            </li>
+
+            <li>
+              Quantized INT8 model
+            </li>
+          </ul>
+
+          <p>
+            Quantization reduced the model's arithmetic precision to improve
+            inference performance on the Raspberry Pi while preserving most
+            of its classification accuracy.
+          </p>
+
+
+          <h2>Results</h2>
+
+          <ul>
+            <li>
+              Training validation accuracy remained between 97% and 100%
+            </li>
+
+            <li>
+              Raspberry Pi FP32 accuracy: approximately 97.5%
+            </li>
+
+            <li>
+              Raspberry Pi INT8 accuracy: approximately 95.5%
+            </li>
+
+            <li>
+              Raspberry Pi FP32 inference latency: approximately 76.6 ms
+            </li>
+
+            <li>
+              Raspberry Pi INT8 inference latency: approximately 51.1 ms
+            </li>
+
+            <li>
+              INT8 provided the best balance between accuracy and real-time
+              performance on the Raspberry Pi
+            </li>
+          </ul>
+
+
+          <h2>Original FP32 model</h2>
+
+          <p>
+            This video shows the original floating-point model running in the
+            real-time camera pipeline.
+          </p>
+
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/W6Os5gTOvQI"
+            title="Original FP32 real-time resistor detection model"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            style="
+              width: 100%;
+              aspect-ratio: 9 / 16;
+              max-height: 720px;
+              border: 0;
+              border-radius: 1rem;
+            "
+          ></iframe>
+
+
+          <h2>Quantized INT8 model</h2>
+
+          <p>
+            This video shows the quantized model, which reduced inference
+            latency on the Raspberry Pi.
+          </p>
+
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/PoXk9OUvbWk"
+            title="Quantized INT8 real-time resistor detection model"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            style="
+              width: 100%;
+              aspect-ratio: 9 / 16;
+              max-height: 720px;
+              border: 0;
+              border-radius: 1rem;
+            "
+          ></iframe>
+
+
+          <h2>Limitations</h2>
+
+          <p>
+            The training dataset contained only one main resistor color and a
+            limited number of examples. Some objects with resistor-like shapes
+            therefore produced false-positive or uncertain predictions.
+          </p>
+
+          <p>
+            A larger dataset containing more resistor types, colors,
+            backgrounds, lighting conditions, and visually similar electronic
+            components would improve generalization.
+          </p>
+
 
           <h2>What this project demonstrates</h2>
-          <p>Embedded machine learning, computer vision, resource-aware model design, hardware/software integration, and multidisciplinary teamwork.</p>
+
+          <p>
+            Embedded machine learning, computer vision, transfer learning,
+            model quantization, TensorFlow Lite deployment, dataset
+            development, Raspberry Pi integration, and real-time performance
+            evaluation.
+          </p>
+
         </article>
-        <aside class="case-sidebar" aria-label="Project information">
+
+
+        <aside
+          class="case-sidebar"
+          aria-label="Project information"
+        >
+
           <h2>Project facts</h2>
+
           <dl class="case-facts">
-            <div><dt>Project type</dt><dd>Collaborative university project</dd></div>
-            <div><dt>Year</dt><dd>2026</dd></div>
-            <div><dt>Disciplines</dt><dd>Embedded AI, Computer vision, Machine learning</dd></div>
+
+            <div>
+              <dt>Project type</dt>
+              <dd>Collaborative university project</dd>
+            </div>
+
+            <div>
+              <dt>Period</dt>
+              <dd>Autumn 2025</dd>
+            </div>
+
+            <div>
+              <dt>Hardware</dt>
+              <dd>Raspberry Pi 4 and Camera Module 3</dd>
+            </div>
+
+            <div>
+              <dt>Model</dt>
+              <dd>MobileNetV2</dd>
+            </div>
+
+            <div>
+              <dt>Deployment</dt>
+              <dd>TensorFlow Lite FP32 and INT8</dd>
+            </div>
+
+            <div>
+              <dt>Task</dt>
+              <dd>Resistor vs. non-resistor detection</dd>
+            </div>
+
           </dl>
-          <a class="button button-primary" href="https://github.com/Oscilous/APML-Project" target="_blank" rel="noopener">Open repository</a>
+
+          <a
+            class="button button-primary"
+            href="https://github.com/Oscilous/APML-Project"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open repository
+          </a>
+
+          <a
+            class="button"
+            href="https://youtube.com/shorts/W6Os5gTOvQI"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch original model
+          </a>
+
+          <a
+            class="button"
+            href="https://youtube.com/shorts/PoXk9OUvbWk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch quantized model
+          </a>
+
         </aside>
+
       </div>
     </section>
+
   </main>
 
-  <footer class="site-footer"><div class="container footer-row"><p>© <span id="current-year"></span> Edwin Camilo Ramirez Sanabria</p><p><a href="../index.html#projects">Back to all projects</a></p></div></footer>
-  <script defer src="../assets/js/main.js"></script>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+
+      <p>
+        © <span id="current-year"></span>
+        Edwin Camilo Ramirez Sanabria
+      </p>
+
+      <p>
+        <a href="../index.html#projects">
+          Back to all projects
+        </a>
+      </p>
+
+    </div>
+  </footer>
+
+
+  <script
+    defer
+    src="../assets/js/main.js"
+  ></script>
+
 </body>
 </html>

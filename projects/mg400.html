@@ -2,79 +2,425 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A configurable software framework for automating laboratory sample-dispensing workflows with a DOBOT MG400 robot." />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+  <meta
+    name="description"
+    content="A parameter-driven software framework for configurable robotic sample-dispensing workflows using a DOBOT MG400."
+  />
   <meta name="theme-color" content="#08111f" />
+
   <title>Parameterized Robotic Sample Dispensing | Camilo Ramirez</title>
-  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <link
+    rel="icon"
+    href="../assets/images/favicon.svg"
+    type="image/svg+xml"
+  />
+  <link
+    rel="stylesheet"
+    href="../assets/css/styles.css"
+  />
 </head>
+
 <body class="project-page">
-  <a class="skip-link" href="#case-content">Skip to content</a>
+
+  <a class="skip-link" href="#case-content">
+    Skip to content
+  </a>
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="../index.html" aria-label="Camilo Ramirez home"><span class="brand-mark">CR</span><span class="brand-text">Camilo Ramirez</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span><span></span></button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="../index.html#expertise">Expertise</a><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a>
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="Camilo Ramirez home"
+      >
+        <span class="brand-mark">CR</span>
+        <span class="brand-text">Camilo Ramirez</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        id="site-nav"
+        class="site-nav"
+        aria-label="Primary navigation"
+      >
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
         <a class="nav-cta" href="../cv/">View CV</a>
       </nav>
+
     </div>
   </header>
+
+
   <main id="case-content">
+
     <section class="case-hero">
       <div class="container">
-        <a class="case-back" href="../index.html#projects">← Back to projects</a>
-        <p class="eyebrow">Independent MSc project</p>
-        <h1 class="case-title">Parameterized Robotic Sample Dispensing</h1>
-        <p class="case-lead">A configurable software framework for automating laboratory sample-dispensing workflows with a DOBOT MG400 robot.</p>
-        <div class="case-meta"><span>Robotics</span><span>Automation</span><span>Python</span><span>System integration</span></div>
-        <div class="case-visual"><img src="../assets/images/project-mg400.svg" alt="Visual cover for Parameterized Robotic Sample Dispensing" /></div>
+
+        <a
+          class="case-back"
+          href="../index.html#projects"
+        >
+          ← Back to projects
+        </a>
+
+        <p class="eyebrow">
+          MSc thesis project
+        </p>
+
+        <h1 class="case-title">
+          Parameterized Robotic Sample Dispensing
+        </h1>
+
+        <p class="case-lead">
+          A parameter-driven software framework for configuring, validating,
+          and executing robotic sample-dispensing workflows using a DOBOT
+          MG400.
+        </p>
+
+        <div class="case-meta">
+          <span>Robotics</span>
+          <span>Automation</span>
+          <span>Python</span>
+          <span>Mechanical design</span>
+        </div>
+
+        <div class="case-visual">
+          <img
+            src="../assets/images/project-mg400.svg"
+            alt="DOBOT MG400 robotic sample-dispensing framework"
+          />
+        </div>
+
       </div>
     </section>
+
+
     <section class="section-shell">
       <div class="container case-layout">
-        <article class="case-content">
-          <h2>The problem</h2>
-          <p>Laboratory robot applications are often built around fixed station layouts and hard-coded sequences. Changing a sample holder, liquid configuration, dispensing order, or workcell layout can therefore require substantial changes to the robot program.</p>
 
-          <h2>The approach</h2>
-          <p>I developed a parameterized framework that separates process configuration, station geometry, workflow generation, validation, and robot execution.</p>
-          <div class="architecture-flow" aria-label="System architecture">
-            <div class="flow-step">Process configuration</div><div class="flow-step">Workflow generation</div><div class="flow-step">Pose validation</div><div class="flow-step">Motion execution</div><div class="flow-step">DOBOT MG400</div>
+        <article class="case-content">
+
+          <h2>The problem</h2>
+
+          <p>
+            Laboratory robot applications are often built around fixed station
+            layouts and hard-coded task sequences. Moving a station, changing
+            the wafer size, adding materials, or modifying the dispensing order
+            may therefore require changes to the robot program.
+          </p>
+
+
+          <h2>The solution</h2>
+
+          <p>
+            I developed a reusable framework that separates experiment-specific
+            settings from the main robot execution logic.
+          </p>
+
+          <p>
+            Station geometry, wafer patterns, material definitions, motion
+            parameters, calibrated poses, and safety constraints are stored as
+            configuration data. The framework uses this information to generate
+            and validate the required robot movements before execution.
+          </p>
+
+          <div
+            class="architecture-flow"
+            aria-label="System architecture"
+          >
+            <div class="flow-step">Configuration</div>
+            <div class="flow-step">Workflow generation</div>
+            <div class="flow-step">Workspace validation</div>
+            <div class="flow-step">Motion execution</div>
+            <div class="flow-step">DOBOT MG400</div>
           </div>
 
-          <h2>My contribution</h2>
+
+          <h2>Key features</h2>
+
           <ul>
-            <li>Designed the parameterized software architecture and workflow-generation logic.</li>
-            <li>Implemented configurable tip, liquid, wafer, and waste stations.</li>
-            <li>Developed operator and developer interfaces for execution and configuration.</li>
-            <li>Integrated the framework with the Common Robot Interface and the MG400 controller.</li>
-            <li>Implemented geometry, workspace, and pose validation.</li>
-            <li>Evaluated reconfiguration, robot motion, and dry-run workflow execution.</li>
+            <li>
+              Configurable tip, liquid, wafer, and waste stations
+            </li>
+
+            <li>
+              Automatic generation of 3-inch and 4-inch wafer patterns
+            </li>
+
+            <li>
+              Calibrated station poses and safe joint waypoints
+            </li>
+
+            <li>
+              Workspace, station-footprint, and approach-pose validation
+            </li>
+
+            <li>
+              Mixing and non-mixing material workflows
+            </li>
+
+            <li>
+              Operator and developer interfaces built with Streamlit
+            </li>
+
+            <li>
+              Runtime monitoring, stop handling, and execution logging
+            </li>
+
+            <li>
+              3D-printed pipette holder designed for the MG400
+            </li>
           </ul>
 
-          <h2>Validation scope</h2>
-          <p>The system was evaluated through dry-run robot execution, multiple station and wafer configurations, motion analysis, and repeatability tests. Active liquid-volume and droplet-placement validation were outside the experimental scope.</p>
+
+          <h2>My contribution</h2>
+
+          <ul>
+            <li>
+              Designed the overall software architecture and configuration model
+            </li>
+
+            <li>
+              Implemented workflow generation and station-action logic
+            </li>
+
+            <li>
+              Developed wafer-point generation and material sequencing
+            </li>
+
+            <li>
+              Integrated the framework with the Common Robot Interface and
+              DOBOT MG400 controller
+            </li>
+
+            <li>
+              Developed the operator and developer user interfaces
+            </li>
+
+            <li>
+              Implemented pose, workspace, and geometry validation
+            </li>
+
+            <li>
+              Designed and 3D-printed the pipette mounting system
+            </li>
+
+            <li>
+              Planned and completed the experimental validation
+            </li>
+          </ul>
+
+
+          <h2>Validation</h2>
+
+          <p>
+            The framework was evaluated through dry-run execution using
+            controller-reported TCP position data.
+          </p>
+
+          <ul>
+            <li>
+              Executed complete workflows across tip, liquid, wafer, and waste
+              stations
+            </li>
+
+            <li>
+              Regenerated trajectories after changing the wafer location
+            </li>
+
+            <li>
+              Adapted the workflow from a 4-inch to a 3-inch wafer
+            </li>
+
+            <li>
+              Tested different robot speed settings
+            </li>
+
+            <li>
+              Completed workflows with and without mixing logic
+            </li>
+
+            <li>
+              Achieved mean XY repeatability deviations below 0.009 mm across
+              the tested speeds
+            </li>
+          </ul>
+
+
+          <h2>Mechanical holder</h2>
+
+          <p>
+            The pipette holder was modeled in CAD, manufactured through 3D
+            printing, and evaluated using static structural analysis.
+          </p>
+
+          <ul>
+            <li>
+              Maximum Von Mises stress: 27.9 MPa
+            </li>
+
+            <li>
+              Selected PLA allowable strength: 40 MPa
+            </li>
+
+            <li>
+              Estimated safety factor: approximately 1.43
+            </li>
+          </ul>
+
+
+          <h2>Full workflow video</h2>
+
+          <p>
+            The following video shows a complete dry-run workflow executed by
+            the DOBOT MG400.
+          </p>
+
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/tJ19T4USLLg"
+            title="DOBOT MG400 full robotic sample-dispensing workflow"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            style="
+              width: 100%;
+              aspect-ratio: 16 / 9;
+              border: 0;
+              border-radius: 1rem;
+            "
+          ></iframe>
+
+
+          <h2>Project limitations</h2>
+
+          <p>
+            The project validated robot motion, reconfiguration, workflow
+            execution, and controller-reported repeatability. It did not
+            evaluate delivered liquid volume, droplet formation, or physical
+            sample-placement accuracy.
+          </p>
+
 
           <h2>What this project demonstrates</h2>
-          <p>Robot programming, configurable automation, software architecture, physical-system integration, operator-interface design, validation, and experimental engineering.</p>
+
+          <p>
+            Robot programming, configurable automation, software architecture,
+            workspace validation, user-interface development, mechanical
+            prototyping, system integration, and experimental validation.
+          </p>
+
         </article>
-        <aside class="case-sidebar" aria-label="Project information">
+
+
+        <aside
+          class="case-sidebar"
+          aria-label="Project information"
+        >
+
           <h2>Project facts</h2>
+
           <dl class="case-facts">
-            <div><dt>Project type</dt><dd>Independent MSc project</dd></div>
-            <div><dt>Year</dt><dd>2026</dd></div>
-            <div><dt>Disciplines</dt><dd>Robotics, Automation, Python</dd></div>
+
+            <div>
+              <dt>Project type</dt>
+              <dd>Independent MSc thesis project</dd>
+            </div>
+
+            <div>
+              <dt>Year</dt>
+              <dd>2026</dd>
+            </div>
+
+            <div>
+              <dt>Robot</dt>
+              <dd>DOBOT MG400</dd>
+            </div>
+
+            <div>
+              <dt>Software</dt>
+              <dd>Python and Streamlit</dd>
+            </div>
+
+            <div>
+              <dt>Validation</dt>
+              <dd>Dry-run robotic execution</dd>
+            </div>
+
+            <div>
+              <dt>Application</dt>
+              <dd>Laboratory sample dispensing</dd>
+            </div>
+
           </dl>
-          <a class="button button-primary" href="https://github.com/Camilo1114/Pipetting-MG400" target="_blank" rel="noopener">Open repository</a>
+
+          <a
+            class="button button-primary"
+            href="https://github.com/Camilo1114/Pipetting-MG400"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open repository
+          </a>
+
+          <a
+            class="button"
+            href="https://youtu.be/tJ19T4USLLg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch full run
+          </a>
+
         </aside>
+
       </div>
     </section>
+
   </main>
 
-  <footer class="site-footer"><div class="container footer-row"><p>© <span id="current-year"></span> Edwin Camilo Ramirez Sanabria</p><p><a href="../index.html#projects">Back to all projects</a></p></div></footer>
-  <script defer src="../assets/js/main.js"></script>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+
+      <p>
+        © <span id="current-year"></span>
+        Edwin Camilo Ramirez Sanabria
+      </p>
+
+      <p>
+        <a href="../index.html#projects">
+          Back to all projects
+        </a>
+      </p>
+
+    </div>
+  </footer>
+
+
+  <script
+    defer
+    src="../assets/js/main.js"
+  ></script>
+
 </body>
 </html>

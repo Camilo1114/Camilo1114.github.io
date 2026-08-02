@@ -2,76 +2,379 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A comparison of deep variational autoencoder and convolutional approaches for classifying animal species from environmental audio recordings." />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="A deep learning comparison of convolutional and variational approaches for classifying bird species from environmental audio recordings."
+  />
+
   <meta name="theme-color" content="#08111f" />
-  <title>Animal Species Classification from Audio | Camilo Ramirez</title>
-  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <title>Bird Species Classification from Audio | Camilo Ramirez</title>
+
+  <link
+    rel="icon"
+    href="../assets/images/favicon.svg"
+    type="image/svg+xml"
+  />
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/styles.css"
+  />
 </head>
+
 <body class="project-page">
-  <a class="skip-link" href="#case-content">Skip to content</a>
+
+  <a class="skip-link" href="#case-content">
+    Skip to content
+  </a>
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="../index.html" aria-label="Camilo Ramirez home"><span class="brand-mark">CR</span><span class="brand-text">Camilo Ramirez</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span><span></span></button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="../index.html#expertise">Expertise</a><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a>
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="Camilo Ramirez home"
+      >
+        <span class="brand-mark">CR</span>
+        <span class="brand-text">Camilo Ramirez</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        id="site-nav"
+        class="site-nav"
+        aria-label="Primary navigation"
+      >
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
         <a class="nav-cta" href="../cv/">View CV</a>
       </nav>
+
     </div>
   </header>
+
+
   <main id="case-content">
+
     <section class="case-hero">
       <div class="container">
-        <a class="case-back" href="../index.html#projects">← Back to projects</a>
-        <p class="eyebrow">Independent project</p>
-        <h1 class="case-title">Animal Species Classification from Audio</h1>
-        <p class="case-lead">A comparison of deep variational autoencoder and convolutional approaches for classifying animal species from environmental audio recordings.</p>
-        <div class="case-meta"><span>Deep learning</span><span>Audio processing</span><span>PyTorch</span><span>Signal processing</span></div>
-        <div class="case-visual"><img src="../assets/images/project-audio.svg" alt="Visual cover for Animal Species Classification from Audio" /></div>
+
+        <a
+          class="case-back"
+          href="../index.html#projects"
+        >
+          ← Back to projects
+        </a>
+
+        <p class="eyebrow">
+          Independent university project
+        </p>
+
+        <h1 class="case-title">
+          Bird Species Classification from Audio
+        </h1>
+
+        <p class="case-lead">
+          A comparison of convolutional and deep variational
+          autoencoder approaches for classifying bird species from
+          environmental audio recordings.
+        </p>
+
+        <div class="case-meta">
+          <span>Deep learning</span>
+          <span>Audio processing</span>
+          <span>PyTorch</span>
+          <span>MFCCs</span>
+        </div>
+
+        <div class="case-visual">
+          <img
+            src="../assets/images/project-audio.svg"
+            alt="Bird species classification from environmental audio"
+          />
+        </div>
+
       </div>
     </section>
+
+
     <section class="section-shell">
       <div class="container case-layout">
+
         <article class="case-content">
+
           <h2>The problem</h2>
-          <p>Environmental audio recordings contain background noise, variable call duration, and overlapping frequency patterns. The project investigates how learned representations and direct convolutional classification perform on this type of data.</p>
 
-          <h2>The approach</h2>
-          <div class="architecture-flow" aria-label="Audio classification workflow">
-            <div class="flow-step">Audio recordings</div><div class="flow-step">MFCC features</div><div class="flow-step">CNN / DVAE</div><div class="flow-step">Classifier</div><div class="flow-step">Species prediction</div>
-          </div>
-          <p>The study compares a convolutional approach with a deep variational autoencoder representation followed by classification.</p>
+          <p>
+            Passive acoustic monitoring can support biodiversity research by
+            identifying animal species from environmental recordings.
+            However, real-world audio contains background noise, overlapping
+            calls, variable recording quality, and species with similar
+            vocalizations.
+          </p>
 
-          <h2>My contribution</h2>
+
+          <h2>The dataset</h2>
+
+          <p>
+            The project used a subset of 15 bird species from the BirdCLEF
+            2025 dataset. The recordings were collected in the Magdalena
+            Valley in Colombia and represent authentic environmental
+            conditions.
+          </p>
+
+
+          <h2>Audio preparation</h2>
+
           <ul>
-            <li>Prepared the environmental audio data and acoustic features.</li>
-            <li>Implemented and evaluated convolutional and variational approaches.</li>
-            <li>Compared model behaviour and generalization.</li>
-            <li>Documented the experimental workflow and results.</li>
+            <li>
+              Converted the original OGG recordings to WAV format
+            </li>
+
+            <li>
+              Resampled the recordings to 16,000 Hz
+            </li>
+
+            <li>
+              Extracted Mel-Frequency Cepstral Coefficients
+            </li>
+
+            <li>
+              Used 13 MFCC coefficients and 40 mel filters
+            </li>
+
+            <li>
+              Padded or trimmed the feature sequences to a consistent size
+            </li>
           </ul>
 
-          <h2>What this project demonstrates</h2>
-          <p>Audio signal processing, deep learning, representation learning, experimental comparison, and model evaluation.</p>
 
-          <div class="notice">A real MFCC or spectrogram image will make this page substantially stronger than the current abstract cover.</div>
+          <h2>The approach</h2>
+
+          <div
+            class="architecture-flow"
+            aria-label="Audio classification workflow"
+          >
+            <div class="flow-step">Audio recordings</div>
+            <div class="flow-step">MFCC extraction</div>
+            <div class="flow-step">CNN or DVAE</div>
+            <div class="flow-step">Model evaluation</div>
+            <div class="flow-step">Species prediction</div>
+          </div>
+
+          <p>
+            Two deep learning approaches were implemented and compared using
+            the same dataset split.
+          </p>
+
+
+          <h3>Convolutional Neural Network</h3>
+
+          <p>
+            The CNN treated the MFCC representations as two-dimensional
+            time-frequency inputs. Three convolutional blocks were used to
+            detect local frequency and temporal patterns before producing a
+            prediction for one of the 15 species.
+          </p>
+
+
+          <h3>Deep Variational Autoencoder</h3>
+
+          <p>
+            The DVAE used a GRU-based encoder and decoder with a
+            64-dimensional latent space. A classification head was connected
+            to the latent representation so the model could learn both to
+            reconstruct MFCC sequences and classify species.
+          </p>
+
+
+          <h2>Training</h2>
+
+          <ul>
+            <li>
+              Implemented both models using PyTorch
+            </li>
+
+            <li>
+              Used an 80% training and 20% test split
+            </li>
+
+            <li>
+              Trained the CNN with cross-entropy loss
+            </li>
+
+            <li>
+              Trained the DVAE using reconstruction loss, KL divergence,
+              and classification loss
+            </li>
+
+            <li>
+              Applied Gaussian noise, time masking, and frequency masking
+              to improve CNN robustness
+            </li>
+          </ul>
+
+
+          <h2>Results</h2>
+
+          <ul>
+            <li>
+              CNN test accuracy: approximately 68.8%
+            </li>
+
+            <li>
+              DVAE-based classification accuracy: approximately 50.2%
+            </li>
+
+            <li>
+              The CNN converged more quickly and produced more stable
+              classification results
+            </li>
+
+            <li>
+              The DVAE learned partial class structure, but several species
+              remained overlapped in the latent space
+            </li>
+          </ul>
+
+          <p>
+            The CNN performed better because it was optimized directly for
+            supervised classification. The DVAE had to balance reconstruction,
+            latent-space regularization, and classification at the same time.
+          </p>
+
+
+          <h2>Evaluation</h2>
+
+          <p>
+            Model performance was evaluated using classification accuracy,
+            training-loss curves, and confusion matrices. A t-SNE
+            visualization was also used to inspect how the DVAE organized bird
+            species within its latent space.
+          </p>
+
+
+          <h2>Limitations</h2>
+
+          <p>
+            Some species remained difficult to distinguish because their
+            vocalizations contained similar time-frequency characteristics.
+            The DVAE also struggled to create clearly separated latent
+            clusters while simultaneously reconstructing the MFCC inputs.
+          </p>
+
+
+          <h2>What this project demonstrates</h2>
+
+          <p>
+            Audio signal processing, MFCC feature extraction, deep learning,
+            representation learning, PyTorch model development, data
+            augmentation, experimental comparison, and model evaluation.
+          </p>
+
         </article>
-        <aside class="case-sidebar" aria-label="Project information">
+
+
+        <aside
+          class="case-sidebar"
+          aria-label="Project information"
+        >
+
           <h2>Project facts</h2>
+
           <dl class="case-facts">
-            <div><dt>Project type</dt><dd>Independent project</dd></div>
-            <div><dt>Year</dt><dd>2026</dd></div>
-            <div><dt>Disciplines</dt><dd>Deep learning, Audio processing, PyTorch</dd></div>
+
+            <div>
+              <dt>Project type</dt>
+              <dd>Independent university project</dd>
+            </div>
+
+            <div>
+              <dt>Year</dt>
+              <dd>2025</dd>
+            </div>
+
+            <div>
+              <dt>Dataset</dt>
+              <dd>BirdCLEF 2025</dd>
+            </div>
+
+            <div>
+              <dt>Classes</dt>
+              <dd>15 bird species</dd>
+            </div>
+
+            <div>
+              <dt>Models</dt>
+              <dd>CNN and DVAE</dd>
+            </div>
+
+            <div>
+              <dt>Framework</dt>
+              <dd>PyTorch</dd>
+            </div>
+
           </dl>
-          <a class="button button-primary" href="https://github.com/Camilo1114/Animal-Species-Classification-from-Audio-Recordings" target="_blank" rel="noopener">Open repository</a>
+
+          <a
+            class="button button-primary"
+            href="https://github.com/Camilo1114/Animal-Species-Classification-from-Audio-Recordings"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open repository
+          </a>
+
         </aside>
+
       </div>
     </section>
+
   </main>
 
-  <footer class="site-footer"><div class="container footer-row"><p>© <span id="current-year"></span> Edwin Camilo Ramirez Sanabria</p><p><a href="../index.html#projects">Back to all projects</a></p></div></footer>
-  <script defer src="../assets/js/main.js"></script>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+
+      <p>
+        © <span id="current-year"></span>
+        Edwin Camilo Ramirez Sanabria
+      </p>
+
+      <p>
+        <a href="../index.html#projects">
+          Back to all projects
+        </a>
+      </p>
+
+    </div>
+  </footer>
+
+
+  <script
+    defer
+    src="../assets/js/main.js"
+  ></script>
+
 </body>
 </html>

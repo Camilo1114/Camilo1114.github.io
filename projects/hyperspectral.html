@@ -2,76 +2,448 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A machine-learning workflow for identifying plastic materials from spectral signatures and hyperspectral measurements." />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="A two-stage machine learning pipeline for detecting plastics and identifying PET from hyperspectral reflectance measurements."
+  />
+
   <meta name="theme-color" content="#08111f" />
-  <title>Hyperspectral Plastic Identification | Camilo Ramirez</title>
-  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+
+  <title>Hyperspectral Polymer Identification | Camilo Ramirez</title>
+
+  <link
+    rel="icon"
+    href="../assets/images/favicon.svg"
+    type="image/svg+xml"
+  />
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/styles.css"
+  />
 </head>
+
 <body class="project-page">
-  <a class="skip-link" href="#case-content">Skip to content</a>
+
+  <a class="skip-link" href="#case-content">
+    Skip to content
+  </a>
 
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="../index.html" aria-label="Camilo Ramirez home"><span class="brand-mark">CR</span><span class="brand-text">Camilo Ramirez</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span><span></span></button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="../index.html#expertise">Expertise</a><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a>
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="Camilo Ramirez home"
+      >
+        <span class="brand-mark">CR</span>
+        <span class="brand-text">Camilo Ramirez</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        id="site-nav"
+        class="site-nav"
+        aria-label="Primary navigation"
+      >
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
         <a class="nav-cta" href="../cv/">View CV</a>
       </nav>
+
     </div>
   </header>
+
+
   <main id="case-content">
+
     <section class="case-hero">
       <div class="container">
-        <a class="case-back" href="../index.html#projects">← Back to projects</a>
-        <p class="eyebrow">Independent project</p>
-        <h1 class="case-title">Hyperspectral Plastic Identification</h1>
-        <p class="case-lead">A machine-learning workflow for identifying plastic materials from spectral signatures and hyperspectral measurements.</p>
-        <div class="case-meta"><span>Machine learning</span><span>Hyperspectral imaging</span><span>Python</span><span>Material identification</span></div>
-        <div class="case-visual"><img src="../assets/images/project-hyperspectral.svg" alt="Visual cover for Hyperspectral Plastic Identification" /></div>
+
+        <a
+          class="case-back"
+          href="../index.html#projects"
+        >
+          ← Back to projects
+        </a>
+
+        <p class="eyebrow">
+          Collaborative university project
+        </p>
+
+        <h1 class="case-title">
+          Hyperspectral Polymer Identification
+        </h1>
+
+        <p class="case-lead">
+          A two-stage machine learning pipeline for detecting plastics and
+          identifying PET from hyperspectral reflectance measurements.
+        </p>
+
+        <div class="case-meta">
+          <span>Machine learning</span>
+          <span>Hyperspectral imaging</span>
+          <span>Python</span>
+          <span>Material classification</span>
+        </div>
+
+        <div class="case-visual">
+          <img
+            src="../assets/images/project-hyperspectral.svg"
+            alt="Hyperspectral polymer identification project"
+          />
+        </div>
+
       </div>
     </section>
+
+
     <section class="section-shell">
       <div class="container case-layout">
+
         <article class="case-content">
+
           <h2>The problem</h2>
-          <p>Different materials can appear visually similar while having distinct spectral responses. Hyperspectral measurements provide richer information than conventional RGB images, but they also require careful preprocessing and modelling.</p>
 
-          <h2>The approach</h2>
-          <div class="architecture-flow" aria-label="Machine learning workflow">
-            <div class="flow-step">Spectral data</div><div class="flow-step">Preprocessing</div><div class="flow-step">Feature reduction</div><div class="flow-step">Classification</div><div class="flow-step">Material prediction</div>
-          </div>
-          <p>The project uses public reference data together with measurements from the NEWTEC BUTEO system to explore plastic identification across different spectral sources.</p>
+          <p>
+            Different polymers can look similar in conventional images while
+            having different reflectance patterns across the electromagnetic
+            spectrum. This makes standard RGB-based sorting difficult,
+            especially in recycling applications.
+          </p>
 
-          <h2>My contribution</h2>
+          <p>
+            Hyperspectral imaging captures reflectance across hundreds of
+            wavelength bands, providing information that can be used to
+            distinguish materials based on their spectral characteristics
+            rather than their visible appearance.
+          </p>
+
+
+          <h2>Project goal</h2>
+
+          <p>
+            The project investigated whether machine learning models trained
+            on public hyperspectral datasets could identify PET and then be
+            applied directly to measurements from a different imaging system:
+            the NEWTEC BUTEO.
+          </p>
+
+
+          <h2>Data and measurements</h2>
+
+          <p>
+            Public hyperspectral datasets were used for model training,
+            including spectra from PET, polyethylene, polypropylene,
+            polystyrene, organic matter, water, and other non-plastic
+            materials.
+          </p>
+
+          <p>
+            Local validation measurements were collected using the NEWTEC
+            BUTEO pushbroom hyperspectral imaging system. The system operates
+            from 430 to 1000 nanometers and records 330 spectral bands.
+          </p>
+
+          <p>
+            The measured samples included LEGO pieces, plastic waste objects,
+            and a PETG sample used to test cross-system model transfer.
+          </p>
+
+
+          <h2>Preprocessing</h2>
+
           <ul>
-            <li>Prepared and explored hyperspectral datasets.</li>
-            <li>Developed the preprocessing and machine-learning workflow.</li>
-            <li>Compared material spectra and classification behaviour.</li>
-            <li>Structured the experiments and documented limitations across measurement systems.</li>
+            <li>
+              Recorded white and dark references for reflectance calibration
+            </li>
+
+            <li>
+              Selected regions of interest from the hyperspectral images
+            </li>
+
+            <li>
+              Calculated mean reflectance spectra for each selected region
+            </li>
+
+            <li>
+              Interpolated all spectra to a shared 430–1000 nm wavelength grid
+            </li>
+
+            <li>
+              Standardized the features using a scaler fitted on the training
+              data
+            </li>
+
+            <li>
+              Reused the same preprocessing components during NEWTEC inference
+            </li>
           </ul>
 
-          <h2>What this project demonstrates</h2>
-          <p>Scientific machine learning, spectral-data processing, dimensionality reduction, classification, experimental comparison, and clear communication of model limitations.</p>
 
-          <div class="notice">Replace the abstract cover with your strongest real visual later: spectral curves, PCA projection, classification map, or a BUTEO measurement image.</div>
+          <h2>The approach</h2>
+
+          <div
+            class="architecture-flow"
+            aria-label="Hyperspectral classification workflow"
+          >
+            <div class="flow-step">Reflectance spectrum</div>
+            <div class="flow-step">Spectral harmonization</div>
+            <div class="flow-step">Plastic detection</div>
+            <div class="flow-step">PET identification</div>
+            <div class="flow-step">Material prediction</div>
+          </div>
+
+          <p>
+            Instead of treating the problem as a single multiclass
+            classification task, the pipeline was divided into two binary
+            decisions.
+          </p>
+
+          <ol>
+            <li>
+              Determine whether the measured spectrum represents plastic or
+              non-plastic material.
+            </li>
+
+            <li>
+              For spectra identified as plastic, determine whether the material
+              is PET or another polymer.
+            </li>
+          </ol>
+
+          <p>
+            This structure reduces the risk of incorrectly identifying
+            non-plastic materials as PET.
+          </p>
+
+
+          <h2>Machine learning models</h2>
+
+          <p>
+            Both classification stages used Support Vector Machines with a
+            radial basis function kernel.
+          </p>
+
+          <p>
+            SVMs were selected because they are suitable for high-dimensional,
+            nonlinear spectral data and can perform reliably when collecting
+            large labeled industrial datasets is impractical.
+          </p>
+
+          <p>
+            Probabilistic model outputs were used to apply confidence
+            thresholds at both stages of the decision process.
+          </p>
+
+
+          <h2>Results on public data</h2>
+
+          <p>
+            The pipeline successfully separated plastic spectra from
+            non-plastic materials and distinguished PET from other polymers in
+            the public datasets.
+          </p>
+
+          <p>
+            For the PET-versus-PE classification task, the model achieved:
+          </p>
+
+          <ul>
+            <li>
+              Overall accuracy: 95%
+            </li>
+
+            <li>
+              PET precision: 0.88
+            </li>
+
+            <li>
+              PET recall: 0.95
+            </li>
+
+            <li>
+              PET F1-score: 0.91
+            </li>
+
+            <li>
+              PE precision: 0.98
+            </li>
+
+            <li>
+              PE recall: 0.95
+            </li>
+          </ul>
+
+
+          <h2>Transfer to the NEWTEC system</h2>
+
+          <p>
+            The trained preprocessing and classification pipeline was applied
+            directly to PETG spectra exported from the NEWTEC system without
+            retraining or parameter adjustment.
+          </p>
+
+          <p>
+            Two spectra were extracted from separate regions of the same PETG
+            sample. Both produced consistent results:
+          </p>
+
+          <ul>
+            <li>
+              Plastic probability for both spectra: 1.000
+            </li>
+
+            <li>
+              PET probability for the first spectrum: 0.882
+            </li>
+
+            <li>
+              PET probability for the second spectrum: 0.877
+            </li>
+
+            <li>
+              Both spectra received a final PET-positive classification
+            </li>
+          </ul>
+
+          <p>
+            Because PETG is chemically related to PET, these results indicate
+            that the model detected PET-like spectral characteristics. They do
+            not demonstrate reliable separation between PET and PETG.
+          </p>
+
+
+          <h2>Limitations</h2>
+
+          <p>
+            The NEWTEC validation dataset was small and contained limited
+            material diversity. Differences in sensor response, illumination,
+            noise, and spectral amplitude were also observed between the public
+            training data and the NEWTEC measurements.
+          </p>
+
+          <p>
+            The system should therefore be considered a proof of concept rather
+            than a production-ready recycling classifier. A larger validation
+            set with more polymers, non-plastic materials, colors, surfaces,
+            and acquisition settings would be required to evaluate reliability
+            and false detections.
+          </p>
+
+
+          <h2>What this project demonstrates</h2>
+
+          <p>
+            Hyperspectral imaging, spectral-data processing, reflectance
+            calibration, machine learning, nonlinear classification,
+            cross-system inference, experimental data collection, and careful
+            evaluation of model-transfer limitations.
+          </p>
+
         </article>
-        <aside class="case-sidebar" aria-label="Project information">
+
+
+        <aside
+          class="case-sidebar"
+          aria-label="Project information"
+        >
+
           <h2>Project facts</h2>
+
           <dl class="case-facts">
-            <div><dt>Project type</dt><dd>Independent project</dd></div>
-            <div><dt>Year</dt><dd>2026</dd></div>
-            <div><dt>Disciplines</dt><dd>Machine learning, Hyperspectral imaging, Python</dd></div>
+
+            <div>
+              <dt>Project type</dt>
+              <dd>Collaborative university project</dd>
+            </div>
+
+            <div>
+              <dt>Period</dt>
+              <dd>2025–2026</dd>
+            </div>
+
+            <div>
+              <dt>Imaging system</dt>
+              <dd>NEWTEC BUTEO</dd>
+            </div>
+
+            <div>
+              <dt>Spectral range</dt>
+              <dd>430–1000 nm</dd>
+            </div>
+
+            <div>
+              <dt>Models</dt>
+              <dd>Two-stage RBF-SVM pipeline</dd>
+            </div>
+
+            <div>
+              <dt>Application</dt>
+              <dd>PET identification and recycling</dd>
+            </div>
+
           </dl>
-          <a class="button button-primary" href="https://github.com/Camilo1114/Hyperspectral-Plastic-Identification" target="_blank" rel="noopener">Open repository</a>
+
+          <a
+            class="button button-primary"
+            href="https://github.com/Camilo1114/Hyperspectral-Plastic-Identification"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open repository
+          </a>
+
         </aside>
+
       </div>
     </section>
+
   </main>
 
-  <footer class="site-footer"><div class="container footer-row"><p>© <span id="current-year"></span> Edwin Camilo Ramirez Sanabria</p><p><a href="../index.html#projects">Back to all projects</a></p></div></footer>
-  <script defer src="../assets/js/main.js"></script>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+
+      <p>
+        © <span id="current-year"></span>
+        Edwin Camilo Ramirez Sanabria
+      </p>
+
+      <p>
+        <a href="../index.html#projects">
+          Back to all projects
+        </a>
+      </p>
+
+    </div>
+  </footer>
+
+
+  <script
+    defer
+    src="../assets/js/main.js"
+  ></script>
+
 </body>
 </html>
