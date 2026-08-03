@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Bellabeat wellness data analysis</title>
+  <desc id="desc">Abstract dashboard with activity, sleep, and wellness charts.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1424"/>
+      <stop offset="1" stop-color="#17243a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#78a5ff"/>
+      <stop offset="1" stop-color="#8cf0d0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <circle cx="970" cy="115" r="180" fill="#274469" opacity=".28"/>
+  <circle cx="105" cy="625" r="190" fill="#193354" opacity=".35"/>
+  <rect x="125" y="110" width="950" height="480" rx="34" fill="#111d30" stroke="#5572a4" stroke-width="3"/>
+  <rect x="170" y="165" width="300" height="160" rx="24" fill="#172842"/>
+  <circle cx="260" cy="245" r="54" fill="none" stroke="#294362" stroke-width="18"/>
+  <path d="M260 191a54 54 0 0 1 48 79" fill="none" stroke="url(#accent)" stroke-width="18" stroke-linecap="round"/>
+  <text x="260" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#eef4ff">72%</text>
+  <text x="335" y="227" font-family="Arial, sans-serif" font-size="24" fill="#eef4ff">Daily activity</text>
+  <text x="335" y="263" font-family="Arial, sans-serif" font-size="18" fill="#a8b7d1">Steps and intensity</text>
+  <rect x="500" y="165" width="525" height="160" rx="24" fill="#172842"/>
+  <path d="M545 275 C610 225, 645 260, 700 215 S805 245, 855 190 S950 230, 985 195" fill="none" stroke="#78a5ff" stroke-width="8" stroke-linecap="round"/>
+  <line x1="545" y1="285" x2="985" y2="285" stroke="#314966" stroke-width="2"/>
+  <text x="545" y="205" font-family="Arial, sans-serif" font-size="24" fill="#eef4ff">Activity trend</text>
+  <rect x="170" y="355" width="420" height="180" rx="24" fill="#172842"/>
+  <text x="210" y="400" font-family="Arial, sans-serif" font-size="24" fill="#eef4ff">Sleep duration</text>
+  <rect x="215" y="470" width="46" height="35" rx="8" fill="#5f7dc0"/>
+  <rect x="282" y="438" width="46" height="67" rx="8" fill="#6f91df"/>
+  <rect x="349" y="415" width="46" height="90" rx="8" fill="#7ba8f7"/>
+  <rect x="416" y="450" width="46" height="55" rx="8" fill="#78c8d7"/>
+  <rect x="483" y="425" width="46" height="80" rx="8" fill="#8cf0d0"/>
+  <rect x="620" y="355" width="405" height="180" rx="24" fill="#172842"/>
+  <text x="660" y="400" font-family="Arial, sans-serif" font-size="24" fill="#eef4ff">Wellness insights</text>
+  <circle cx="725" cy="467" r="34" fill="#78a5ff" opacity=".9"/>
+  <circle cx="820" cy="467" r="34" fill="#8cf0d0" opacity=".9"/>
+  <circle cx="915" cy="467" r="34" fill="#d8e3ff" opacity=".85"/>
+  <path d="M710 466l10 10 21-24" fill="none" stroke="#0d1726" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M805 466l10 10 21-24" fill="none" stroke="#0d1726" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M900 466l10 10 21-24" fill="none" stroke="#0d1726" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="125" y="650" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#eef4ff">Bellabeat Wellness Data Analysis</text>
+</svg>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="A nonlinear model predictive control system with Extended Kalman Filter state estimation for controlling water levels in an interconnected multi-tank process."
+  />
+
+  <meta name="theme-color" content="#08111f" />
+
+  <title>Model Predictive Control for a Multi-Tank System | Camilo Ramirez</title>
+
+  <link
+    rel="icon"
+    href="../assets/images/favicon.svg"
+    type="image/svg+xml"
+  />
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/styles.css"
+  />
+</head>
+
+<body class="project-page">
+
+  <a class="skip-link" href="#case-content">
+    Skip to content
+  </a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="Camilo Ramirez home"
+      >
+        <span class="brand-mark">CR</span>
+        <span class="brand-text">Camilo Ramirez</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        id="site-nav"
+        class="site-nav"
+        aria-label="Primary navigation"
+      >
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+        <a class="nav-cta" href="../cv/">View CV</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main id="case-content">
+
+    <section class="case-hero">
+      <div class="container">
+
+        <a
+          class="case-back"
+          href="../index.html#projects"
+        >
+          ← Back to projects
+        </a>
+
+        <p class="eyebrow">
+          Collaborative university project
+        </p>
+
+        <h1 class="case-title">
+          Model Predictive Control for a Multi-Tank System
+        </h1>
+
+        <p class="case-lead">
+          A nonlinear model predictive control system with Extended Kalman
+          Filter state estimation for regulating water levels in an
+          interconnected multi-tank process.
+        </p>
+
+        <div class="case-meta">
+          <span>Model predictive control</span>
+          <span>Nonlinear systems</span>
+          <span>MATLAB</span>
+          <span>Simulink</span>
+        </div>
+
+        <div class="case-visual">
+          <img
+            src="../assets/images/project-mpc.svg"
+            alt="Model predictive control for an interconnected multi-tank system"
+          />
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section-shell">
+      <div class="container case-layout">
+
+        <article class="case-content">
+
+          <h2>The problem</h2>
+
+          <p>
+            The project used an experimental system of interconnected water
+            tanks controlled through a pump and multiple valves.
+          </p>
+
+          <p>
+            The objective was to make the water levels in the upper and middle
+            tanks follow changing reference values while accounting for
+            nonlinear flow behavior, actuator limits, sensor noise, and
+            disturbances.
+          </p>
+
+
+          <h2>The system</h2>
+
+          <p>
+            The process was modeled as a nonlinear multiple-input,
+            multiple-output system.
+          </p>
+
+          <ul>
+            <li>
+              Controlled outputs: water levels in Tank 1 and Tank 2
+            </li>
+
+            <li>
+              Manipulated inputs: pump flow and two control-valve signals
+            </li>
+
+            <li>
+              Nonlinear outflow behavior governed by the valve orifice laws
+            </li>
+
+            <li>
+              Nonlinear relationship between pump PWM and water inflow
+            </li>
+
+            <li>
+              Maximum permitted water level of 0.35 meters
+            </li>
+          </ul>
+
+
+          <h2>Development workflow</h2>
+
+          <div
+            class="architecture-flow"
+            aria-label="Model predictive control development workflow"
+          >
+            <div class="flow-step">System identification</div>
+            <div class="flow-step">Nonlinear modeling</div>
+            <div class="flow-step">MPC design</div>
+            <div class="flow-step">EKF estimation</div>
+            <div class="flow-step">Plant testing</div>
+          </div>
+
+
+          <h2>System identification</h2>
+
+          <p>
+            Experimental measurements were used to identify the pump and valve
+            behavior before designing the controller.
+          </p>
+
+          <ul>
+            <li>
+              Measured pump flow at different PWM input values
+            </li>
+
+            <li>
+              Estimated manual-valve coefficients from tank-draining tests
+            </li>
+
+            <li>
+              Estimated nonlinear flow exponents using least-squares fitting
+            </li>
+
+            <li>
+              Estimated control-valve coefficients at multiple valve inputs
+            </li>
+
+            <li>
+              Implemented pump and valve relationships as lookup tables
+            </li>
+          </ul>
+
+
+          <h2>Nonlinear model</h2>
+
+          <p>
+            The tank dynamics were derived from mass-balance equations. The
+            model included the pump inflow, flow between tanks, and outflow
+            through the manual and controlled valves.
+          </p>
+
+          <p>
+            The nonlinear system was implemented in MATLAB and Simulink and
+            compared with measurements from the physical plant.
+          </p>
+
+
+          <h2>Model predictive controller</h2>
+
+          <p>
+            The continuous-time nonlinear equations were discretized using the
+            Forward Euler method.
+          </p>
+
+          <p>
+            The controller used an incremental input formulation. Instead of
+            directly optimizing the actuator values, the MPC calculated changes
+            in:
+          </p>
+
+          <ul>
+            <li>
+              Pump inflow
+            </li>
+
+            <li>
+              Tank 1 control-valve input
+            </li>
+
+            <li>
+              Tank 2 control-valve input
+            </li>
+          </ul>
+
+          <p>
+            At every sampling step, the nonlinear model was linearized around
+            the current operating point. The controller then predicted future
+            tank levels and selected the input sequence that balanced reference
+            tracking with control effort.
+          </p>
+
+          <p>
+            Only the first calculated control increment was applied before the
+            optimization was repeated using the next system measurement.
+          </p>
+
+
+          <h2>Controller implementation</h2>
+
+          <ul>
+            <li>
+              Incremental nonlinear MPC formulation
+            </li>
+
+            <li>
+              Local Jacobian-based linearization at each sampling step
+            </li>
+
+            <li>
+              Prediction and control horizons
+            </li>
+
+            <li>
+              Quadratic tracking and control-effort cost function
+            </li>
+
+            <li>
+              Initial weight selection using Bryson's rule
+            </li>
+
+            <li>
+              Actuator saturation based on physical limits
+            </li>
+
+            <li>
+              Low-pass filtering to smooth control signals
+            </li>
+          </ul>
+
+
+          <h2>Extended Kalman Filter</h2>
+
+          <p>
+            An Extended Kalman Filter was added because raw measurements and
+            the nominal model were affected by sensor noise, parameter errors,
+            leakage, valve nonlinearities, and other unmodeled disturbances.
+          </p>
+
+          <p>
+            The EKF state contained the two water levels and two additional
+            disturbance states. These disturbance states allowed the observer
+            to estimate slowly changing model errors and reduce steady-state
+            offsets.
+          </p>
+
+          <ul>
+            <li>
+              Predicted the nonlinear system state
+            </li>
+
+            <li>
+              Linearized the model using a Jacobian matrix
+            </li>
+
+            <li>
+              Corrected predictions using measured tank levels
+            </li>
+
+            <li>
+              Reduced measurement noise before the state entered the MPC
+            </li>
+
+            <li>
+              Estimated unmodeled disturbances affecting both tanks
+            </li>
+          </ul>
+
+
+          <h2>Simulation results</h2>
+
+          <p>
+            Under nominal simulation conditions, the MPC tracked the reference
+            values for both tanks with smooth transient behavior, no overshoot,
+            and short settling times.
+          </p>
+
+          <p>
+            The MPC and EKF were also tested with simulated disturbances,
+            including:
+          </p>
+
+          <ul>
+            <li>
+              An external output disturbance introduced at 250 seconds
+            </li>
+
+            <li>
+              Changes to the manual-valve parameters at 400 seconds
+            </li>
+          </ul>
+
+          <p>
+            The observer and controller compensated for both disturbances and
+            returned the simulated system to the required operating condition.
+          </p>
+
+
+          <h2>Experimental results</h2>
+
+          <p>
+            The MPC and EKF were then connected to the physical multi-tank
+            plant through Simulink.
+          </p>
+
+          <ul>
+            <li>
+              The real system followed the changing references for both tanks
+            </li>
+
+            <li>
+              Tracking was slower than in simulation after large reference
+              changes
+            </li>
+
+            <li>
+              The EKF reduced sensor noise and estimation bias
+            </li>
+
+            <li>
+              Tank-level estimation errors were approximately 0.02 meters
+            </li>
+
+            <li>
+              Pump and valve signals changed consistently with the requested
+              filling and draining behavior
+            </li>
+          </ul>
+
+
+          <h2>Limitations</h2>
+
+          <p>
+            The physical system did not perform as quickly as the simulated
+            model. The main limitations were:
+          </p>
+
+          <ul>
+            <li>
+              Actuator nonlinearities and dead zones
+            </li>
+
+            <li>
+              Sensor bias and measurement noise
+            </li>
+
+            <li>
+              Unmodeled system delays
+            </li>
+
+            <li>
+              Limited pump and valve parameter identification
+            </li>
+
+            <li>
+              Flow behavior influenced by hose geometry and curvature
+            </li>
+          </ul>
+
+          <p>
+            The final controller was suitable for regulation and moderate
+            reference changes, but improved actuator models and explicit delay
+            handling would be required for faster tracking.
+          </p>
+
+
+          <h2>What this project demonstrates</h2>
+
+          <p>
+            Nonlinear dynamic modeling, system identification, model predictive
+            control, Extended Kalman filtering, optimization, MATLAB and
+            Simulink implementation, state estimation, control-system
+            integration, and experimental validation.
+          </p>
+
+        </article>
+
+
+        <aside
+          class="case-sidebar"
+          aria-label="Project information"
+        >
+
+          <h2>Project facts</h2>
+
+          <dl class="case-facts">
+
+            <div>
+              <dt>Project type</dt>
+              <dd>Collaborative university project</dd>
+            </div>
+
+            <div>
+              <dt>Period</dt>
+              <dd>Autumn 2025</dd>
+            </div>
+
+            <div>
+              <dt>System</dt>
+              <dd>Nonlinear multi-tank process</dd>
+            </div>
+
+            <div>
+              <dt>Controller</dt>
+              <dd>Incremental nonlinear MPC</dd>
+            </div>
+
+            <div>
+              <dt>State estimation</dt>
+              <dd>Extended Kalman Filter</dd>
+            </div>
+
+            <div>
+              <dt>Tools</dt>
+              <dd>MATLAB and Simulink</dd>
+            </div>
+
+          </dl>
+
+          <a
+            class="button button-primary"
+            href="https://github.com/Camilo1114/MPC"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open repository
+          </a>
+
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+
+      <p>
+        © <span id="current-year"></span>
+        Edwin Camilo Ramirez Sanabria
+      </p>
+
+      <p>
+        <a href="../index.html#projects">
+          Back to all projects
+        </a>
+      </p>
+
+    </div>
+  </footer>
+
+
+  <script
+    defer
+    src="../assets/js/main.js"
+  ></script>
+
+</body>
+</html>

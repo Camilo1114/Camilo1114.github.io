@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Thermal stress optimization and crack assessment</title>
+  <desc id="desc">Abstract finite-element visualization of a layered curved shell under thermal loading.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#091321"/>
+      <stop offset="1" stop-color="#172538"/>
+    </linearGradient>
+    <linearGradient id="stress" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#3f69d9"/>
+      <stop offset=".28" stop-color="#62c7d8"/>
+      <stop offset=".52" stop-color="#8de17a"/>
+      <stop offset=".72" stop-color="#f4d65a"/>
+      <stop offset=".88" stop-color="#ee7d43"/>
+      <stop offset="1" stop-color="#d84d66"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <circle cx="1035" cy="120" r="180" fill="#2d3f63" opacity=".24"/>
+  <circle cx="130" cy="610" r="195" fill="#1d3650" opacity=".28"/>
+  <g transform="translate(180 110)">
+    <path d="M80 420 A390 390 0 0 1 470 30 L470 115 A305 305 0 0 0 165 420 Z" fill="url(#stress)" stroke="#d7e4ff" stroke-width="4"/>
+    <path d="M98 420 A372 372 0 0 1 470 48" fill="none" stroke="#142338" stroke-width="4"/>
+    <path d="M118 420 A352 352 0 0 1 470 68" fill="none" stroke="#f1f5ff" stroke-width="5" opacity=".78"/>
+    <path d="M138 420 A332 332 0 0 1 470 88" fill="none" stroke="#16253b" stroke-width="4"/>
+    <path d="M240 309 L270 275" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+    <path d="M245 306 L277 270" stroke="#f8fafc" stroke-width="3" stroke-linecap="round"/>
+    <g stroke="#d3def2" stroke-width="1.8" opacity=".45">
+      <path d="M110 420 A360 360 0 0 1 470 60"/>
+      <path d="M140 420 A330 330 0 0 1 470 90"/>
+      <path d="M170 420 A300 300 0 0 1 470 120"/>
+      <line x1="165" y1="420" x2="80" y2="420"/>
+      <line x1="470" y1="115" x2="470" y2="30"/>
+      <line x1="190" y1="390" x2="125" y2="350"/>
+      <line x1="245" y1="330" x2="190" y2="275"/>
+      <line x1="310" y1="270" x2="265" y2="205"/>
+      <line x1="380" y1="210" x2="345" y2="135"/>
+    </g>
+  </g>
+  <rect x="820" y="145" width="46" height="360" rx="18" fill="url(#stress)" stroke="#d7e4ff" stroke-width="2"/>
+  <text x="890" y="165" font-family="Arial, sans-serif" font-size="18" fill="#dce7fb">High stress</text>
+  <text x="890" y="500" font-family="Arial, sans-serif" font-size="18" fill="#dce7fb">Low stress</text>
+  <path d="M245 570 C350 525, 470 545, 580 500 S775 455, 890 505" fill="none" stroke="#8cf0d0" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="580" cy="500" r="10" fill="#eef4ff"/>
+  <text x="180" y="650" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#eef4ff">Thermal Stress Optimization &amp; Crack Assessment</text>
+</svg>

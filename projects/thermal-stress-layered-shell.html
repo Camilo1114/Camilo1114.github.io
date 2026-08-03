@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="A COMSOL Multiphysics finite-element study of thermal stress optimization, mesh sensitivity, and crack safety in a layered aluminum-composite shell."
+  />
+
+  <meta name="theme-color" content="#08111f" />
+
+  <title>
+    Thermal Stress Optimization and Crack Assessment | Camilo Ramirez
+  </title>
+
+  <link
+    rel="icon"
+    href="../assets/images/favicon.svg"
+    type="image/svg+xml"
+  />
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/styles.css"
+  />
+</head>
+
+<body class="project-page">
+
+  <a class="skip-link" href="#case-content">
+    Skip to content
+  </a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="Camilo Ramirez home"
+      >
+        <span class="brand-mark">CR</span>
+        <span class="brand-text">Camilo Ramirez</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        id="site-nav"
+        class="site-nav"
+        aria-label="Primary navigation"
+      >
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+        <a class="nav-cta" href="../cv/">View CV</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main id="case-content">
+
+    <section class="case-hero">
+      <div class="container">
+
+        <a
+          class="case-back"
+          href="../index.html#projects"
+        >
+          ← Back to projects
+        </a>
+
+        <p class="eyebrow">
+          University project
+        </p>
+
+        <h1 class="case-title">
+          Thermal Stress Optimization and Crack Assessment
+        </h1>
+
+        <p class="case-lead">
+          A thermo-mechanical finite-element study comparing mesh strategies,
+          optimizing active heat input, and evaluating crack safety in a
+          layered aluminum–composite shell.
+        </p>
+
+        <div class="case-meta">
+          <span>COMSOL Multiphysics</span>
+          <span>Finite-element analysis</span>
+          <span>Thermal stress</span>
+          <span>Structural mechanics</span>
+        </div>
+
+        <div class="case-visual">
+          <img
+            src="../assets/images/project-thermal-stress.png"
+            alt="Finite-element visualization of thermal stress in a layered curved shell"
+          />
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section-shell">
+      <div class="container case-layout">
+
+        <article class="case-content">
+
+          <h2>The engineering problem</h2>
+
+          <p>
+            Layered structures made from materials with different thermal
+            expansion coefficients can develop significant internal stresses
+            when exposed to temperature changes.
+          </p>
+
+          <p>
+            These stresses can contribute to deformation, interface damage,
+            crack propagation, or delamination in applications such as
+            aircraft, satellites, and vehicle structures.
+          </p>
+
+          <p>
+            The objective of this project was to model the coupled thermal and
+            structural behavior of a curved layered shell and investigate
+            whether active heating could reduce the resulting stress.
+          </p>
+
+
+          <h2>Geometry and materials</h2>
+
+          <p>
+            The model represented a quarter-cylindrical layered shell with a
+            total length of 200 mm.
+          </p>
+
+          <ul>
+            <li>
+              Inner radius: 90 mm
+            </li>
+
+            <li>
+              Outer radius: 100 mm
+            </li>
+
+            <li>
+              Aluminum layer thickness: 4 mm
+            </li>
+
+            <li>
+              Polymer-composite layer thickness: 6 mm
+            </li>
+
+            <li>
+              Aluminum thermal expansion coefficient:
+              23.4 × 10<sup>−6</sup> /°C
+            </li>
+
+            <li>
+              Composite thermal expansion coefficient:
+              56 × 10<sup>−6</sup> /°C
+            </li>
+          </ul>
+
+          <figure style="margin: 2rem 0;">
+            <img
+              src="../assets/images/projects/thermal-stress/thermal-shell-geometry.png"
+              alt="COMSOL geometry of the layered quarter-cylindrical shell"
+              loading="lazy"
+              style="
+                width: 100%;
+                display: block;
+                border-radius: 1rem;
+              "
+            />
+
+            <figcaption style="margin-top: 0.75rem;">
+              COMSOL geometry showing the aluminum and polymer-composite
+              layers.
+            </figcaption>
+          </figure>
+
+
+          <h2>Boundary conditions</h2>
+
+          <p>
+            The model included thermal and mechanical boundary conditions
+            representing an externally cooled layered structure with heat
+            entering through one surface.
+          </p>
+
+          <ul>
+            <li>
+              Convection on the outer surface
+            </li>
+
+            <li>
+              Ambient temperature of −20 °C
+            </li>
+
+            <li>
+              Heat inflow through the lower surface
+            </li>
+
+            <li>
+              Constant temperature of 20 °C on the fixed front surface
+            </li>
+
+            <li>
+              Thermal insulation on the symmetry and back surfaces
+            </li>
+
+            <li>
+              Optional active heat supply applied to the inner surface
+            </li>
+          </ul>
+
+
+          <h2>Simulation workflow</h2>
+
+          <div
+            class="architecture-flow"
+            aria-label="Thermo-mechanical finite-element workflow"
+          >
+            <div class="flow-step">Geometry and materials</div>
+            <div class="flow-step">Thermal boundaries</div>
+            <div class="flow-step">Mesh sensitivity</div>
+            <div class="flow-step">Heat optimization</div>
+            <div class="flow-step">Crack assessment</div>
+          </div>
+
+
+          <h2>Mesh sensitivity</h2>
+
+          <p>
+            Two three-dimensional finite-element mesh strategies were
+            developed and compared:
+          </p>
+
+          <ul>
+            <li>
+              Free tetrahedral elements
+            </li>
+
+            <li>
+              Swept hexahedral elements
+            </li>
+          </ul>
+
+
+          <h3>Tetrahedral mesh</h3>
+
+          <p>
+            The tetrahedral mesh was easy to generate and could adapt to
+            irregular geometry. A mesh-sensitivity study was performed by
+            changing the maximum element size and observing the resulting
+            stress and displacement.
+          </p>
+
+          <p>
+            A maximum element size of approximately 6 mm was required to obtain
+            a change below 1% in the evaluated results.
+          </p>
+
+          <figure style="margin: 2rem 0;">
+            <img
+              src="../assets/images/projects/thermal-stress/tetrahedral-mesh-convergence.png"
+              alt="Tetrahedral mesh and convergence results"
+              loading="lazy"
+              style="
+                width: 100%;
+                display: block;
+                border-radius: 1rem;
+              "
+            />
+
+            <figcaption style="margin-top: 0.75rem;">
+              Tetrahedral mesh and convergence of stress and displacement.
+            </figcaption>
+          </figure>
+
+
+          <h3>Hexahedral mesh</h3>
+
+          <p>
+            A swept hexahedral mesh was also created for the regular layered
+            geometry.
+          </p>
+
+          <p>
+            The hexahedral model showed smooth convergence with fewer elements
+            and lower computational cost. Both element types produced
+            consistent results, supporting the validity of the finite-element
+            implementation.
+          </p>
+
+          <figure style="margin: 2rem 0;">
+            <img
+              src="../assets/images/projects/thermal-stress/hexahedral-mesh-convergence.png"
+              alt="Swept hexahedral mesh and convergence results"
+              loading="lazy"
+              style="
+                width: 100%;
+                display: block;
+                border-radius: 1rem;
+              "
+            />
+
+            <figcaption style="margin-top: 0.75rem;">
+              Swept hexahedral mesh and convergence of stress and displacement.
+            </figcaption>
+          </figure>
+
+
+          <h2>Baseline thermo-mechanical results</h2>
+
+          <p>
+            The coupled simulation calculated the temperature distribution,
+            structural displacement, and Von Mises stress throughout the
+            layered shell.
+          </p>
+
+          <p>
+            The difference in thermal expansion between the aluminum and
+            composite layers generated stress across the interface and near the
+            constrained regions of the structure.
+          </p>
+
+          <figure style="margin: 2rem 0;">
+            <img
+              src="../assets/images/projects/thermal-stress/baseline-thermal-results.png"
+              alt="Baseline temperature, Von Mises stress, and displacement results"
+              loading="lazy"
+              style="
+                width: 100%;
+                display: block;
+                border-radius: 1rem;
+              "
+            />
+
+            <figcaption style="margin-top: 0.75rem;">
+              Baseline temperature, Von Mises stress, and displacement fields.
+            </figcaption>
+          </figure>
+
+
+          <h2>Active heat-input optimization</h2>
+
+          <p>
+            A parametric sweep was performed to investigate how the active heat
+            supply applied to the inner surface affected the maximum Von Mises
+            stress.
+          </p>
+
+          <p>
+            The heat input was first evaluated over a broad range and then
+            refined around the lowest-stress region.
+          </p>
+
+          <p>
+            The minimum evaluated maximum stress occurred at approximately:
+          </p>
+
+          <p>
+            <strong>
+              Q<sub>A</sub> = 2207 W/m²
+            </strong>
+          </p>
+
+          <figure style="margin: 2rem 0;">
+            <img
+              src="../assets/images/projects/thermal-stress/heat-input-optimization.png"
+              alt="Parametric sweep used to identify the active heat input that minimized Von Mises stress"
+              loading="lazy"
+              style="
+                width: 100%;
+                display: block;
+                border-radius: 1rem;
+              "
+            />
+
+            <figcaption style="margin-top: 0.75rem;">
+              Fine parametric sweep around the minimum-stress heat input.
+            </figcaption>
+          </figure>
+
+
+          <h2>Optimized result</h2>
+
+          <p>
+            Applying the selected heat input reduced the maximum Von Mises
+            stress by approximately 10.5% compared with the case without active
+            heating.
+          </p>
+
+          <p>
+            The result demonstrates how controlled thermal loading can be used
+            to reduce thermally induced stress in a layered structure.
+          </p>
+
+          <figure style="margin: 2rem 0;">
+            <img
+              src="../assets/images/projects/thermal-stress/optimized-thermal-stress.png"
+              alt="Comparison of optimized and baseline thermal stress results"
+              loading="lazy"
+              style="
+                width: 100%;
+                display: block;
+                border-radius: 1rem;
+              "
+            />
+
+            <figcaption style="margin-top: 0.75rem;">
+              Optimized heat-input case compared with the baseline result.
+            </figcaption>
+          </figure>
+
+
+          <h2>Crack assessment</h2>
+
+          <p>
+            A 20 mm long and 1 mm wide crack was introduced in the composite
+            layer to study its effect on structural safety.
+          </p>
+
+          <p>
+            Local mesh refinement was applied around the crack to better
+            capture the stress concentration.
+          </p>
+
+          <p>
+            Under the material-strength assumptions used in the study, the
+            calculated safety factors were:
+          </p>
+
+          <ul>
+            <li>
+              Reinforced polymer safety factor: approximately 6.42
+            </li>
+
+            <li>
+              Aluminum safety factor: approximately 3.09
+            </li>
+          </ul>
+
+          <p>
+            The crack produced a clear local stress concentration, but the
+            calculated maximum stresses remained below the selected material
+            strength limits.
+          </p>
+
+          <figure style="margin: 2rem 0;">
+            <img
+              src="../assets/images/projects/thermal-stress/crack-stress-analysis.png"
+              alt="Finite-element crack stress concentration and calculated safety factors"
+              loading="lazy"
+              style="
+                width: 100%;
+                display: block;
+                border-radius: 1rem;
+              "
+            />
+
+            <figcaption style="margin-top: 0.75rem;">
+              Crack stress concentration and calculated safety factors for the
+              composite and aluminum layers.
+            </figcaption>
+          </figure>
+
+
+          <h2>Key findings</h2>
+
+          <ul>
+            <li>
+              Tetrahedral and hexahedral meshes produced consistent results
+            </li>
+
+            <li>
+              The swept hexahedral mesh converged with fewer elements
+            </li>
+
+            <li>
+              Hexahedral elements were the more efficient choice for the
+              regular shell geometry
+            </li>
+
+            <li>
+              Active heat input reduced the maximum thermally induced stress
+            </li>
+
+            <li>
+              The optimized uniform heat input reduced maximum Von Mises stress
+              by approximately 10.5%
+            </li>
+
+            <li>
+              The modeled crack created a strong local stress concentration
+            </li>
+
+            <li>
+              The calculated stresses remained within the selected material
+              limits for the studied conditions
+            </li>
+          </ul>
+
+
+          <h2>Limitations</h2>
+
+          <p>
+            The polymer composite was represented as an isotropic material,
+            which simplifies the direction-dependent behavior of a real
+            fiber-reinforced composite.
+          </p>
+
+          <p>
+            The crack was represented using an idealized geometry, and the
+            analysis did not model progressive crack growth, interface
+            delamination, fatigue, manufacturing defects, or nonlinear material
+            failure.
+          </p>
+
+          <p>
+            The results should therefore be interpreted as a comparative
+            finite-element study rather than a complete structural
+            certification.
+          </p>
+
+
+          <h2>What this project demonstrates</h2>
+
+          <p>
+            Three-dimensional finite-element modeling, coupled heat-transfer
+            and structural analysis, mesh-sensitivity studies, parameter
+            optimization, thermal-stress evaluation, crack modeling, safety
+            factor assessment, and technical interpretation of simulation
+            results.
+          </p>
+
+        </article>
+
+
+        <aside
+          class="case-sidebar"
+          aria-label="Project information"
+        >
+
+          <h2>Project facts</h2>
+
+          <dl class="case-facts">
+
+            <div>
+              <dt>Project type</dt>
+              <dd>University project</dd>
+            </div>
+
+            <div>
+              <dt>Year</dt>
+              <dd>2025</dd>
+            </div>
+
+            <div>
+              <dt>Software</dt>
+              <dd>COMSOL Multiphysics</dd>
+            </div>
+
+            <div>
+              <dt>Analysis</dt>
+              <dd>Thermo-mechanical FEA</dd>
+            </div>
+
+            <div>
+              <dt>Geometry</dt>
+              <dd>Layered curved shell</dd>
+            </div>
+
+            <div>
+              <dt>Materials</dt>
+              <dd>Aluminum and polymer composite</dd>
+            </div>
+
+            <div>
+              <dt>Optimization</dt>
+              <dd>Active surface heat input</dd>
+            </div>
+
+            <div>
+              <dt>Damage case</dt>
+              <dd>Composite-layer crack</dd>
+            </div>
+
+          </dl>
+
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+
+      <p>
+        © <span id="current-year"></span>
+        Edwin Camilo Ramirez Sanabria
+      </p>
+
+      <p>
+        <a href="../index.html#projects">
+          Back to all projects
+        </a>
+      </p>
+
+    </div>
+  </footer>
+
+
+  <script
+    defer
+    src="../assets/js/main.js"
+  ></script>
+
+</body>
+</html>

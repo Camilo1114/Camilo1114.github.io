@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="An industrial machine-learning proof of concept for predicting shipment delay risk using operational data available before dispatch."
+  />
+
+  <meta name="theme-color" content="#08111f" />
+
+  <title>Predicting Shipment Delay Risk | Camilo Ramirez</title>
+
+  <link
+    rel="icon"
+    href="../assets/images/favicon.svg"
+    type="image/svg+xml"
+  />
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/styles.css"
+  />
+</head>
+
+<body class="project-page">
+
+  <a class="skip-link" href="#case-content">
+    Skip to content
+  </a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+
+      <a
+        class="brand"
+        href="../index.html"
+        aria-label="Camilo Ramirez home"
+      >
+        <span class="brand-mark">CR</span>
+        <span class="brand-text">Camilo Ramirez</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        id="site-nav"
+        class="site-nav"
+        aria-label="Primary navigation"
+      >
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+        <a class="nav-cta" href="../cv/">View CV</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main id="case-content">
+
+    <section class="case-hero">
+      <div class="container">
+
+        <a
+          class="case-back"
+          href="../index.html#projects"
+        >
+          ← Back to projects
+        </a>
+
+        <p class="eyebrow">
+          Professional project · Under NDA
+        </p>
+
+        <h1 class="case-title">
+          Predicting Shipment Delay Risk
+        </h1>
+
+        <p class="case-lead">
+          An industrial machine-learning proof of concept investigating
+          whether operational data available before dispatch could provide
+          early indicators of shipment delay risk.
+        </p>
+
+        <div class="case-meta">
+          <span>Machine learning</span>
+          <span>Data engineering</span>
+          <span>Predictive analytics</span>
+          <span>Under NDA</span>
+        </div>
+
+        <div class="case-visual">
+          <img
+            src="../assets/images/project-delay-ml.svg"
+            alt="Machine-learning workflow for predicting shipment delay risk"
+          />
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="section-shell">
+      <div class="container case-layout">
+
+        <article class="case-content">
+
+          <div class="notice">
+            <strong>Confidentiality notice:</strong>
+            This project was completed under a non-disclosure agreement.
+            The company name, source data, internal systems, source code,
+            operational details, and exact results are therefore not included.
+          </div>
+
+
+          <h2>The challenge</h2>
+
+          <p>
+            Operational shipment monitoring is often focused on events that
+            have already occurred. This makes it difficult to identify
+            potential delivery problems early enough to support proactive
+            planning.
+          </p>
+
+          <p>
+            The project investigated whether information available before
+            dispatch could be used to estimate the probability that a shipment
+            would exceed its expected service level.
+          </p>
+
+
+          <h2>Project objective</h2>
+
+          <p>
+            The objective was to develop and evaluate an end-to-end
+            machine-learning proof of concept for shipment delay risk.
+          </p>
+
+          <p>
+            The project examined:
+          </p>
+
+          <ul>
+            <li>
+              Whether pre-dispatch operational data contained a useful
+              predictive signal
+            </li>
+
+            <li>
+              Which machine-learning approaches produced the most stable
+              results
+            </li>
+
+            <li>
+              How class imbalance affected the detection of delayed shipments
+            </li>
+
+            <li>
+              Which types of operational information influenced predictions
+            </li>
+
+            <li>
+              How model outputs could be integrated into a reporting and
+              monitoring workflow
+            </li>
+          </ul>
+
+
+          <h2>My contribution</h2>
+
+          <ul>
+            <li>
+              Designed the end-to-end data and machine-learning workflow
+            </li>
+
+            <li>
+              Investigated data-quality issues and defined validation rules
+            </li>
+
+            <li>
+              Reconstructed reliable delivery-performance labels from
+              operational timestamps and service-level information
+            </li>
+
+            <li>
+              Developed the preprocessing and feature-engineering pipeline
+            </li>
+
+            <li>
+              Evaluated several supervised machine-learning models
+            </li>
+
+            <li>
+              Compared strategies for handling class imbalance
+            </li>
+
+            <li>
+              Performed time-based model validation using later operational
+              periods
+            </li>
+
+            <li>
+              Analyzed model behavior across different operational segments
+            </li>
+
+            <li>
+              Implemented global and local model-explainability methods
+            </li>
+
+            <li>
+              Designed a proof-of-concept workflow for scheduled inference,
+              monitoring, and dashboard reporting
+            </li>
+          </ul>
+
+
+          <h2>Development workflow</h2>
+
+          <div
+            class="architecture-flow"
+            aria-label="Shipment delay prediction workflow"
+          >
+            <div class="flow-step">Operational data</div>
+            <div class="flow-step">Data-quality validation</div>
+            <div class="flow-step">Feature engineering</div>
+            <div class="flow-step">Model training</div>
+            <div class="flow-step">Risk prediction</div>
+          </div>
+
+
+          <h2>Data preparation</h2>
+
+          <p>
+            A significant part of the project focused on creating a reliable
+            modeling dataset from operational records.
+          </p>
+
+          <p>
+            The preparation process included:
+          </p>
+
+          <ul>
+            <li>
+              Timestamp normalization
+            </li>
+
+            <li>
+              Lead-time reconstruction
+            </li>
+
+            <li>
+              Validation of service-level information
+            </li>
+
+            <li>
+              Removal of logically inconsistent records
+            </li>
+
+            <li>
+              Treatment of missing operational metadata
+            </li>
+
+            <li>
+              Prevention of target leakage
+            </li>
+
+            <li>
+              Creation of a reproducible cleaning workflow
+            </li>
+          </ul>
+
+
+          <h2>Feature engineering</h2>
+
+          <p>
+            The models used information that could be made available before
+            shipment departure.
+          </p>
+
+          <p>
+            Feature groups included:
+          </p>
+
+          <ul>
+            <li>
+              Temporal characteristics
+            </li>
+
+            <li>
+              Geographic and route-related information
+            </li>
+
+            <li>
+              Service-level characteristics
+            </li>
+
+            <li>
+              Transportation and operational categories
+            </li>
+
+            <li>
+              Historical performance indicators
+            </li>
+
+            <li>
+              Cross-border and regional indicators
+            </li>
+          </ul>
+
+          <p>
+            High-cardinality identifiers were replaced or supplemented with
+            more structured geographic and operational representations to
+            reduce overfitting and improve stability over time.
+          </p>
+
+
+          <h2>Machine-learning approach</h2>
+
+          <p>
+            The problem was formulated as a supervised binary classification
+            task:
+          </p>
+
+          <ul>
+            <li>
+              On-time shipment
+            </li>
+
+            <li>
+              Shipment at risk of arriving late
+            </li>
+          </ul>
+
+          <p>
+            Several model families were evaluated, including:
+          </p>
+
+          <ul>
+            <li>
+              Logistic regression
+            </li>
+
+            <li>
+              Random forests
+            </li>
+
+            <li>
+              Support vector machines
+            </li>
+
+            <li>
+              Neural networks
+            </li>
+
+            <li>
+              Gradient-boosted tree models
+            </li>
+          </ul>
+
+          <p>
+            Gradient-boosted models provided the most stable balance between
+            predictive performance, scalability, interpretability, and
+            integration with the intended data workflow.
+          </p>
+
+
+          <h2>Class imbalance</h2>
+
+          <p>
+            Delayed shipments represented the minority class, which meant that
+            overall accuracy alone could provide a misleading view of model
+            performance.
+          </p>
+
+          <p>
+            The project compared multiple training strategies, including:
+          </p>
+
+          <ul>
+            <li>
+              Training on the original imbalanced distribution
+            </li>
+
+            <li>
+              Balanced random undersampling
+            </li>
+
+            <li>
+              Synthetic minority oversampling
+            </li>
+
+            <li>
+              Model-level class weighting
+            </li>
+          </ul>
+
+          <p>
+            Evaluation focused on precision, recall, F1 score, and
+            precision-recall behavior for the delay class.
+          </p>
+
+
+          <h2>Time-based evaluation</h2>
+
+          <p>
+            The models were not evaluated only through random train-test
+            splits. Historical periods were used for training, while later
+            periods were reserved for testing.
+          </p>
+
+          <p>
+            This approach provided a more realistic assessment of how the
+            models would behave when applied to future shipments and helped
+            reveal the effects of temporal drift and changing operational
+            conditions.
+          </p>
+
+
+          <h2>Model explainability</h2>
+
+          <p>
+            Explainability methods were used to understand whether model
+            predictions were consistent with plausible operational patterns.
+          </p>
+
+          <p>
+            The analysis included:
+          </p>
+
+          <ul>
+            <li>
+              Global feature importance
+            </li>
+
+            <li>
+              SHAP summary analysis
+            </li>
+
+            <li>
+              Shipment-level explanations
+            </li>
+
+            <li>
+              Performance comparison across operational segments
+            </li>
+          </ul>
+
+          <p>
+            These explanations were treated as supporting evidence rather than
+            definitive causal conclusions.
+          </p>
+
+
+          <h2>Proof-of-concept integration</h2>
+
+          <p>
+            The project also explored how the predictive model could be
+            incorporated into a repeatable data workflow.
+          </p>
+
+          <div
+            class="architecture-flow"
+            aria-label="Operational prediction architecture"
+          >
+            <div class="flow-step">Cloud data warehouse</div>
+            <div class="flow-step">Scheduled data preparation</div>
+            <div class="flow-step">Model inference</div>
+            <div class="flow-step">Prediction table</div>
+            <div class="flow-step">BI dashboard</div>
+          </div>
+
+          <p>
+            The proposed workflow included:
+          </p>
+
+          <ul>
+            <li>
+              Scheduled extraction of recent operational records
+            </li>
+
+            <li>
+              Reuse of the same cleaning and feature-engineering pipeline used
+              during model development
+            </li>
+
+            <li>
+              Generation of a delay-risk probability for each eligible record
+            </li>
+
+            <li>
+              Storage of predictions in an analytics-ready table
+            </li>
+
+            <li>
+              Visualization of predicted and observed delay patterns in a
+              business-intelligence dashboard
+            </li>
+
+            <li>
+              Support for model monitoring and scheduled retraining
+            </li>
+          </ul>
+
+
+          <h2>Key findings</h2>
+
+          <ul>
+            <li>
+              Class imbalance strongly affected the model's ability to detect
+              delayed shipments
+            </li>
+
+            <li>
+              Balancing strategies improved detection of the minority delay
+              class
+            </li>
+
+            <li>
+              Gradient-boosted models produced the most stable performance on
+              later time periods
+            </li>
+
+            <li>
+              Geographic and historical operational features added useful
+              predictive information
+            </li>
+
+            <li>
+              Predictability varied significantly across operational segments
+            </li>
+
+            <li>
+              Model explainability helped assess whether predictions were
+              operationally plausible
+            </li>
+
+            <li>
+              Data quality and missing operational signals limited performance
+              more than model complexity
+            </li>
+          </ul>
+
+
+          <h2>Limitations</h2>
+
+          <p>
+            The project demonstrated the feasibility of generating shipment
+            delay-risk indicators, but the available pre-dispatch data did not
+            describe every condition affecting delivery performance.
+          </p>
+
+          <p>
+            Important limitations included:
+          </p>
+
+          <ul>
+            <li>
+              Missing or inconsistent operational metadata
+            </li>
+
+            <li>
+              Temporal changes in transportation performance
+            </li>
+
+            <li>
+              Variation across routes and service types
+            </li>
+
+            <li>
+              Limited information about downstream operational events
+            </li>
+
+            <li>
+              Unavailable external signals such as weather, congestion, and
+              local processing conditions
+            </li>
+          </ul>
+
+          <p>
+            The final system should therefore be viewed as a risk-monitoring
+            proof of concept rather than a fully autonomous operational
+            decision system.
+          </p>
+
+
+          <h2>What this project demonstrates</h2>
+
+          <p>
+            Large-scale data preparation, data-quality engineering, feature
+            engineering, supervised machine learning, class-imbalance
+            handling, temporal validation, gradient boosting, explainable AI,
+            model monitoring, cloud data workflows, dashboard integration, and
+            communication of realistic model limitations.
+          </p>
+
+        </article>
+
+
+        <aside
+          class="case-sidebar"
+          aria-label="Project information"
+        >
+
+          <h2>Project facts</h2>
+
+          <dl class="case-facts">
+
+            <div>
+              <dt>Project type</dt>
+              <dd>Professional industrial project</dd>
+            </div>
+
+            <div>
+              <dt>Confidentiality</dt>
+              <dd>Under NDA</dd>
+            </div>
+
+            <div>
+              <dt>Domain</dt>
+              <dd>Logistics analytics</dd>
+            </div>
+
+            <div>
+              <dt>Task</dt>
+              <dd>Shipment delay risk prediction</dd>
+            </div>
+
+            <div>
+              <dt>Methods</dt>
+              <dd>Supervised machine learning and explainability</dd>
+            </div>
+
+            <div>
+              <dt>Evaluation</dt>
+              <dd>Future-period validation</dd>
+            </div>
+
+            <div>
+              <dt>Status</dt>
+              <dd>Proof of concept</dd>
+            </div>
+
+          </dl>
+
+          <a
+            class="button button-primary"
+            href="mailto:camilo.ramirez1114@gmail.com"
+          >
+            Contact me
+          </a>
+
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+
+      <p>
+        © <span id="current-year"></span>
+        Edwin Camilo Ramirez Sanabria
+      </p>
+
+      <p>
+        <a href="../index.html#projects">
+          Back to all projects
+        </a>
+      </p>
+
+    </div>
+  </footer>
+
+
+  <script
+    defer
+    src="../assets/js/main.js"
+  ></script>
+
+</body>
+</html>
